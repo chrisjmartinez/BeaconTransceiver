@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2074FF3E-DDE5-4901-A4B5-A73102626C1F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BeaconTransceiver</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C3D2FF6D-B94C-4E94-86DF-F7E359CDF976</key>
+		<string>https://github.com/chrisjmartinez/BeaconTransceiver.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BeaconTransceiver.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C3D2FF6D-B94C-4E94-86DF-F7E359CDF976</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chrisjmartinez/BeaconTransceiver.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C3D2FF6D-B94C-4E94-86DF-F7E359CDF976</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C3D2FF6D-B94C-4E94-86DF-F7E359CDF976</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BeaconTransceiver</string>
+		</dict>
+	</array>
+</dict>
+</plist>
