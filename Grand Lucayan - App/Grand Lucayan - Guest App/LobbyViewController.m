@@ -19,5 +19,13 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [UIView animateWithDuration:400 delay:0 options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear animations:^{
+        self.weather.frame = CGRectMake(-self.weather.frame.size.width, self.weather.frame.origin.y, self.weather.frame.size.width, self.weather.frame.size.height);
+    } completion:^(BOOL finished) {
+        
+    }];
+}
 
 @end
