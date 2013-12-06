@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPF-9Z-JH1">
-                                <rect key="frame" x="316" y="532" width="173" height="60"/>
+                                <rect key="frame" x="266" y="547" width="173" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <inset key="titleEdgeInsets" minX="14" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Spa" image="BeaconIcon">
+                                <state key="normal" title="Senses Spa" image="BeaconIcon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,11 +30,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ3-sW-aqF">
-                                <rect key="frame" x="316" y="616" width="173" height="60"/>
+                                <rect key="frame" x="266" y="631" width="263" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <inset key="titleEdgeInsets" minX="14" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Dining" image="BeaconIcon">
+                                <state key="normal" title="Churchill's Restaurant" image="BeaconIcon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,11 +43,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKb-iP-0BW">
-                                <rect key="frame" x="316" y="700" width="173" height="60"/>
+                                <rect key="frame" x="266" y="715" width="263" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <inset key="titleEdgeInsets" minX="14" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Tennis" image="BeaconIcon">
+                                <state key="normal" title="Tennis School" image="BeaconIcon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tennis Pro Shop Beacon" id="5yt-Bk-nwT"/>
+                    <navigationItem key="navigationItem" title="Tennis School Beacon" id="5yt-Bk-nwT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4b-jo-9xS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dining Beacon" id="UYk-au-Ned"/>
+                    <navigationItem key="navigationItem" title="Churchill's Restaurant Beacon" id="UYk-au-Ned"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmT-fg-wa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Spa Beacon" id="Uiz-bg-rg2"/>
+                    <navigationItem key="navigationItem" title="Senses Spa Beacon" id="Uiz-bg-rg2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKT-5K-wVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
