@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A69529BE18525EA500E9ED2B /* SpaBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69529BD18525EA500E9ED2B /* SpaBeaconViewController.m */; };
+		A69529C118525EB600E9ED2B /* DiningBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69529C018525EB600E9ED2B /* DiningBeaconViewController.m */; };
+		A69529C418525EC600E9ED2B /* TennisBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69529C318525EC600E9ED2B /* TennisBeaconViewController.m */; };
+		A69529C71852600200E9ED2B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529C51852600200E9ED2B /* CoreBluetooth.framework */; };
+		A69529C81852600200E9ED2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529C61852600200E9ED2B /* CoreLocation.framework */; };
 		BF58035D1852159D007842A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58035C1852159D007842A0 /* Foundation.framework */; };
 		BF58035F1852159D007842A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58035E1852159D007842A0 /* CoreGraphics.framework */; };
 		BF5803611852159D007842A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5803601852159D007842A0 /* UIKit.framework */; };
@@ -35,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A69529BC18525EA500E9ED2B /* SpaBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaBeaconViewController.h; sourceTree = "<group>"; };
+		A69529BD18525EA500E9ED2B /* SpaBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaBeaconViewController.m; sourceTree = "<group>"; };
+		A69529BF18525EB600E9ED2B /* DiningBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiningBeaconViewController.h; sourceTree = "<group>"; };
+		A69529C018525EB600E9ED2B /* DiningBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiningBeaconViewController.m; sourceTree = "<group>"; };
+		A69529C218525EC600E9ED2B /* TennisBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TennisBeaconViewController.h; sourceTree = "<group>"; };
+		A69529C318525EC600E9ED2B /* TennisBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisBeaconViewController.m; sourceTree = "<group>"; };
+		A69529C51852600200E9ED2B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A69529C61852600200E9ED2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A69529CD1852618700E9ED2B /* BeaconDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BeaconDefinitions.h; path = ../BeaconDefinitions.h; sourceTree = "<group>"; };
 		BF5803591852159D007842A0 /* Beacon Sim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon Sim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF58035C1852159D007842A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF58035E1852159D007842A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69529C71852600200E9ED2B /* CoreBluetooth.framework in Frameworks */,
+				A69529C81852600200E9ED2B /* CoreLocation.framework in Frameworks */,
 				BF58035F1852159D007842A0 /* CoreGraphics.framework in Frameworks */,
 				BF5803611852159D007842A0 /* UIKit.framework in Frameworks */,
 				BF58035D1852159D007842A0 /* Foundation.framework in Frameworks */,
@@ -84,6 +100,7 @@
 		BF5803501852159D007842A0 = {
 			isa = PBXGroup;
 			children = (
+				A69529CD1852618700E9ED2B /* BeaconDefinitions.h */,
 				BF5803621852159D007842A0 /* Beacon Sim */,
 				BF5803841852159E007842A0 /* Beacon SimTests */,
 				BF58035B1852159D007842A0 /* Frameworks */,
@@ -103,6 +120,8 @@
 		BF58035B1852159D007842A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A69529C51852600200E9ED2B /* CoreBluetooth.framework */,
+				A69529C61852600200E9ED2B /* CoreLocation.framework */,
 				BF58035C1852159D007842A0 /* Foundation.framework */,
 				BF58035E1852159D007842A0 /* CoreGraphics.framework */,
 				BF5803601852159D007842A0 /* UIKit.framework */,
@@ -116,8 +135,14 @@
 			children = (
 				BF58036B1852159D007842A0 /* AppDelegate.h */,
 				BF58036C1852159D007842A0 /* AppDelegate.m */,
+				A69529BF18525EB600E9ED2B /* DiningBeaconViewController.h */,
+				A69529C018525EB600E9ED2B /* DiningBeaconViewController.m */,
 				BF58036E1852159D007842A0 /* Main_iPhone.storyboard */,
 				BF5803711852159D007842A0 /* Main_iPad.storyboard */,
+				A69529BC18525EA500E9ED2B /* SpaBeaconViewController.h */,
+				A69529BD18525EA500E9ED2B /* SpaBeaconViewController.m */,
+				A69529C218525EC600E9ED2B /* TennisBeaconViewController.h */,
+				A69529C318525EC600E9ED2B /* TennisBeaconViewController.m */,
 				BF5803741852159D007842A0 /* ViewController.h */,
 				BF5803751852159D007842A0 /* ViewController.m */,
 				BF5803771852159D007842A0 /* Images.xcassets */,
@@ -254,8 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5803761852159D007842A0 /* ViewController.m in Sources */,
+				A69529C418525EC600E9ED2B /* TennisBeaconViewController.m in Sources */,
+				A69529C118525EB600E9ED2B /* DiningBeaconViewController.m in Sources */,
 				BF58036D1852159D007842A0 /* AppDelegate.m in Sources */,
 				BF5803691852159D007842A0 /* main.m in Sources */,
+				A69529BE18525EA500E9ED2B /* SpaBeaconViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +502,7 @@
 				BF5803901852159E007842A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF5803911852159E007842A0 /* Build configuration list for PBXNativeTarget "Beacon SimTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +511,7 @@
 				BF5803931852159E007842A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
