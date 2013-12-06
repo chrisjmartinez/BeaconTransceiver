@@ -34,14 +34,20 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+#if TARGET_IPHONE_SIMULATOR
+#else
     self.beaconPeripheralData = [self.beaconRegion peripheralDataWithMeasuredPower:nil];
     self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
                                                                      queue:nil
                                                                    options:nil];
+#endif
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+#if TARGET_IPHONE_SIMULATOR
+#else
     [self.peripheralManager stopAdvertising];
+#endif
     isTransmitting = NO;
 }
 
