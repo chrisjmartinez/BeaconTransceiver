@@ -48,6 +48,7 @@
 /* Begin PBXFileReference section */
 		A69529C91852601100E9ED2B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A69529CA1852601100E9ED2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A6F6FE10185284490055DBEC /* BeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconDefinitions.h; path = ../BeaconDefinitions.h; sourceTree = "<group>"; };
 		BF08366318523A39000114FD /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyViewController.h; sourceTree = "<group>"; };
 		BF08366418523A39000114FD /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LobbyViewController.m; sourceTree = "<group>"; };
 		BF58031818513A49007842A0 /* Grand Lucayan - Guest App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grand Lucayan - Guest App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +109,7 @@
 		BF58030F18513A49007842A0 = {
 			isa = PBXGroup;
 			children = (
+				A6F6FE10185284490055DBEC /* BeaconDefinitions.h */,
 				BF58032118513A49007842A0 /* Grand Lucayan - Guest App */,
 				BF58034018513A49007842A0 /* Grand Lucayan - Guest AppTests */,
 				BF58031A18513A49007842A0 /* Frameworks */,

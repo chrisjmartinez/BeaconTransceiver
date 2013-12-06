@@ -63,7 +63,7 @@
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                 major:1
                                                                 minor:1
-                                                           identifier:@"com.stokedsoftware.diningRegion"];
+                                                           identifier:diningProximityID];
 }
 
 #pragma mark - CBPeripheralManagerDelegate

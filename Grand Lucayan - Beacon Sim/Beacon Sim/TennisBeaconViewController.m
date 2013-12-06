@@ -63,7 +63,7 @@
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                 major:1
                                                                 minor:1
-                                                           identifier:@"com.stokedsoftware.tennisRegion"];
+                                                           identifier:tennisProximityID];
 }
 
 #pragma mark - CBPeripheralManagerDelegate
