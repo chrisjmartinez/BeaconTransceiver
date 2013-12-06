@@ -25,6 +25,14 @@
 		BF58033D18513A49007842A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58031F18513A49007842A0 /* UIKit.framework */; };
 		BF58034518513A49007842A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF58034318513A49007842A0 /* InfoPlist.strings */; };
 		BF58034718513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF58034618513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m */; };
+		BFB89D0318524D380084BEDD /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0218524D380084BEDD /* SplashViewController.m */; };
+		BFB89D0418524D380084BEDD /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0218524D380084BEDD /* SplashViewController.m */; };
+		BFB89D0718524DFF0084BEDD /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0618524DFF0084BEDD /* SignInViewController.m */; };
+		BFB89D0818524DFF0084BEDD /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0618524DFF0084BEDD /* SignInViewController.m */; };
+		BFB89D0B18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0A18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m */; };
+		BFB89D0C18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0A18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m */; };
+		BFB89D0F18524E570084BEDD /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0E18524E570084BEDD /* ActivityViewController.m */; };
+		BFB89D1018524E570084BEDD /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0E18524E570084BEDD /* ActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,14 @@
 		BF58034218513A49007842A0 /* Grand Lucayan - Guest AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Grand Lucayan - Guest AppTests-Info.plist"; sourceTree = "<group>"; };
 		BF58034418513A49007842A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF58034618513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Grand_Lucayan___Guest_AppTests.m"; sourceTree = "<group>"; };
+		BFB89D0118524D380084BEDD /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		BFB89D0218524D380084BEDD /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		BFB89D0518524DFF0084BEDD /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		BFB89D0618524DFF0084BEDD /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		BFB89D0918524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LookAndFeelCustomizations.h"; sourceTree = "<group>"; };
+		BFB89D0A18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LookAndFeelCustomizations.m"; sourceTree = "<group>"; };
+		BFB89D0D18524E570084BEDD /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		BFB89D0E18524E570084BEDD /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +140,19 @@
 		BF58032118513A49007842A0 /* Grand Lucayan - Guest App */ = {
 			isa = PBXGroup;
 			children = (
+				BFB89D0D18524E570084BEDD /* ActivityViewController.h */,
+				BFB89D0E18524E570084BEDD /* ActivityViewController.m */,
 				BF58032A18513A49007842A0 /* AppDelegate.h */,
 				BF58032B18513A49007842A0 /* AppDelegate.m */,
 				BF08366318523A39000114FD /* LobbyViewController.h */,
 				BF08366418523A39000114FD /* LobbyViewController.m */,
 				BF58032D18513A49007842A0 /* Main.storyboard */,
+				BFB89D0518524DFF0084BEDD /* SignInViewController.h */,
+				BFB89D0618524DFF0084BEDD /* SignInViewController.m */,
+				BFB89D0118524D380084BEDD /* SplashViewController.h */,
+				BFB89D0218524D380084BEDD /* SplashViewController.m */,
+				BFB89D0918524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.h */,
+				BFB89D0A18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m */,
 				BF58033018513A49007842A0 /* ViewController.h */,
 				BF58033118513A49007842A0 /* ViewController.m */,
 				BF58033318513A49007842A0 /* Images.xcassets */,
@@ -263,10 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB89D0318524D380084BEDD /* SplashViewController.m in Sources */,
+				BFB89D0B18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m in Sources */,
 				BF58033218513A49007842A0 /* ViewController.m in Sources */,
 				BF58032C18513A49007842A0 /* AppDelegate.m in Sources */,
 				BF58032818513A49007842A0 /* main.m in Sources */,
+				BFB89D0718524DFF0084BEDD /* SignInViewController.m in Sources */,
 				BF08366518523A39000114FD /* LobbyViewController.m in Sources */,
+				BFB89D0F18524E570084BEDD /* ActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB89D0818524DFF0084BEDD /* SignInViewController.m in Sources */,
+				BFB89D1018524E570084BEDD /* ActivityViewController.m in Sources */,
 				BF58034718513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m in Sources */,
 				BF08366618523A39000114FD /* LobbyViewController.m in Sources */,
+				BFB89D0C18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m in Sources */,
+				BFB89D0418524D380084BEDD /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
