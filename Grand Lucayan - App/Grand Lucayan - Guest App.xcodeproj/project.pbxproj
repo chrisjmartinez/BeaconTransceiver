@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF08366518523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
+		BF08366618523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
 		BF58031C18513A49007842A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58031B18513A49007842A0 /* Foundation.framework */; };
 		BF58031E18513A49007842A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58031D18513A49007842A0 /* CoreGraphics.framework */; };
 		BF58032018513A49007842A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58031F18513A49007842A0 /* UIKit.framework */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF08366318523A39000114FD /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyViewController.h; sourceTree = "<group>"; };
+		BF08366418523A39000114FD /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LobbyViewController.m; sourceTree = "<group>"; };
 		BF58031818513A49007842A0 /* Grand Lucayan - Guest App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grand Lucayan - Guest App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF58031B18513A49007842A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF58031D18513A49007842A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +118,8 @@
 			children = (
 				BF58032A18513A49007842A0 /* AppDelegate.h */,
 				BF58032B18513A49007842A0 /* AppDelegate.m */,
+				BF08366318523A39000114FD /* LobbyViewController.h */,
+				BF08366418523A39000114FD /* LobbyViewController.m */,
 				BF58032D18513A49007842A0 /* Main.storyboard */,
 				BF58033018513A49007842A0 /* ViewController.h */,
 				BF58033118513A49007842A0 /* ViewController.m */,
@@ -252,6 +258,7 @@
 				BF58033218513A49007842A0 /* ViewController.m in Sources */,
 				BF58032C18513A49007842A0 /* AppDelegate.m in Sources */,
 				BF58032818513A49007842A0 /* main.m in Sources */,
+				BF08366518523A39000114FD /* LobbyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF58034718513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m in Sources */,
+				BF08366618523A39000114FD /* LobbyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +468,7 @@
 				BF58034C18513A49007842A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF58034D18513A49007842A0 /* Build configuration list for PBXNativeTarget "Grand Lucayan - Guest AppTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +477,7 @@
 				BF58034F18513A49007842A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
