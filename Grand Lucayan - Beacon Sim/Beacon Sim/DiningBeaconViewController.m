@@ -31,16 +31,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self initBeacon];
-    
-    if (isTransmitting) {
-        [self.peripheralManager stopAdvertising];
-        isTransmitting = NO;
-    } else {
-        self.beaconPeripheralData = [self.beaconRegion peripheralDataWithMeasuredPower:nil];
-        self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
-                                                                         queue:nil
-                                                                       options:nil];
-    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.beaconPeripheralData = [self.beaconRegion peripheralDataWithMeasuredPower:nil];
+    self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
+                                                                     queue:nil
+                                                                   options:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self.peripheralManager stopAdvertising];
+    isTransmitting = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,11 +64,11 @@
 
 -(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
-        NSLog(@"Powered On");
+        NSLog(@"Dining Beacon Powered On");
         [self.peripheralManager startAdvertising:self.beaconPeripheralData];
         isTransmitting = YES;
     } else if (peripheral.state == CBPeripheralManagerStatePoweredOff) {
-        NSLog(@"Powered Off");
+        NSLog(@"Dining Beacon Powered Off");
         [self.peripheralManager stopAdvertising];
         isTransmitting = NO;
     }
