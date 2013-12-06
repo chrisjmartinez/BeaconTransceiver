@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Grand Lucayan - Guest App/Grand Lucayan - Guest App.xcodeproj">
+      location = "group:Grand Lucayan - App/Grand Lucayan - Guest App.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Grand Lucayan - Beacon Sim/Beacon Sim.xcodeproj">
