@@ -474,6 +474,7 @@
 				BF5803901852159E007842A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF5803911852159E007842A0 /* Build configuration list for PBXNativeTarget "Beacon SimTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +483,7 @@
 				BF5803931852159E007842A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
