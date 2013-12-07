@@ -111,19 +111,46 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGi-Qn-uXL">
-                                <rect key="frame" x="26" y="395" width="268" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="SaE-76-1Ta">
+                                <rect key="frame" x="26" y="128" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="3sC-KO-ICn">
+                                <rect key="frame" x="171" y="128" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="QbG-8s-2ba">
+                                <rect key="frame" x="171" y="197" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="zlN-0s-RBF">
+                                <rect key="frame" x="171" y="267" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="HqN-Jy-yyr">
+                                <rect key="frame" x="171" y="337" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-kx-GsB">
+                                <rect key="frame" x="26" y="197" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="adp-p3-FuF">
+                                <rect key="frame" x="26" y="267" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-CG-szl">
+                                <rect key="frame" x="26" y="337" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hVe-we-WUJ"/>
                     <connections>
-                        <outlet property="proximity" destination="xGi-Qn-uXL" id="QG3-He-wfG"/>
+                        <outlet property="diningLabel" destination="QbG-8s-2ba" id="zJN-OX-XNx"/>
+                        <outlet property="spaLabel" destination="bTr-kx-GsB" id="Oyu-ku-do8"/>
+                        <outlet property="tennisLabel" destination="HqN-Jy-yyr" id="Jjz-7g-9bZ"/>
                         <outlet property="weather" destination="mPa-BW-6lf" id="ReP-Pu-H5e"/>
                     </connections>
                 </viewController>
@@ -314,6 +341,7 @@
         <image name="Logo" width="208" height="183"/>
         <image name="LogoTransparent" width="320" height="138"/>
         <image name="MenuButton" width="123" height="50"/>
+        <image name="ProximityIndicatorNotNear" width="123" height="50"/>
         <image name="SmallLogo" width="208" height="183"/>
         <image name="TriangleButton" width="38" height="39"/>
         <image name="Whitebox" width="75" height="75"/>

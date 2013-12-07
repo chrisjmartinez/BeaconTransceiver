@@ -10,10 +10,4 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface LobbyViewController : UIViewController <CLLocationManagerDelegate>
-
-@property (strong, nonatomic) CLBeaconRegion *diningBeaconRegion;
-@property (strong, nonatomic) CLBeaconRegion *spaBeaconRegion;
-@property (strong, nonatomic) CLBeaconRegion *tennisBeaconRegion;
-@property (strong, nonatomic) CLLocationManager *locationManager;
-
 @end
