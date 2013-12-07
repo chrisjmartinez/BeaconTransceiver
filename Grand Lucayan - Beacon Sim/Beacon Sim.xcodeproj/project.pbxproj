@@ -228,7 +228,7 @@
 				ORGANIZATIONNAME = "Grand Lucayan";
 				TargetAttributes = {
 					BF5803581852159D007842A0 = {
-						DevelopmentTeam = ZW82ETTB3F;
+						DevelopmentTeam = HD6AC27BK2;
 					};
 					BF58037C1852159E007842A0 = {
 						TestTargetID = BF5803581852159D007842A0;
