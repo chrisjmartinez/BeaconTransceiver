@@ -11,6 +11,7 @@
 
 @interface LobbyViewController ()
 @property   (nonatomic, retain)     IBOutlet    UIImageView     *weather;
+@property (weak, nonatomic) IBOutlet UILabel *proximity;
 @end
 
 @implementation LobbyViewController
@@ -103,14 +104,28 @@
     CLBeacon *beacon = [[CLBeacon alloc] init];
     beacon = [beacons lastObject];
     
+    NSString * beaconName = @"";
+    if ([region.identifier isEqualToString:diningProximityID])
+        beaconName = @"Churchill's";
+    
+    if ([region.identifier isEqualToString:spaProximityID])
+        beaconName = @"Senses Spa";
+    
+    if ([region.identifier isEqualToString:tennisProximityID])
+        beaconName = @"Tennis School";
+        
     if (beacon.proximity == CLProximityUnknown) {
         NSLog(@"%@ beacon - Unknown Proximity", region.identifier);
+        //self.proximity.text = [NSString stringWithFormat:@"%@ is UNKNOWN", beaconName];
     } else if (beacon.proximity == CLProximityImmediate) {
         NSLog(@"%@ beacon - Immediate", region.identifier);
+        self.proximity.text = [NSString stringWithFormat:@"%@ is VERY CLOSE", beaconName];
     } else if (beacon.proximity == CLProximityNear) {
         NSLog(@"%@ beacon - Near", region.identifier);
+        self.proximity.text = [NSString stringWithFormat:@"%@ is NEAR", beaconName];
     } else if (beacon.proximity == CLProximityFar) {
         NSLog(@"%@ beacon - Far", region.identifier);
+        self.proximity.text = [NSString stringWithFormat:@"%@ is FAR", beaconName];
     }
 }
 
