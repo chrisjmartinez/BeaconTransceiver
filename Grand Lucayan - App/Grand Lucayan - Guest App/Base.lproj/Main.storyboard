@@ -161,16 +161,23 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="BillIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3LC-WZ-D9U">
-                                <rect key="frame" x="20" y="20" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="GrahamIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XXC-fm-pfH">
-                                <rect key="frame" x="20" y="98" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ChrisIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5Pc-oc-KF7">
-                                <rect key="frame" x="20" y="176" width="70" height="70"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tX7-xE-fe5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="bFz-Sh-9Wr">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bFz-Sh-9Wr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="BillIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pOt-S1-I7D">
+                                <rect key="frame" x="10" y="5" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -261,9 +268,7 @@
     </scenes>
     <resources>
         <image name="BillIcon" width="70" height="70"/>
-        <image name="ChrisIcon" width="70" height="70"/>
         <image name="Clouds" width="1080" height="261"/>
-        <image name="GrahamIcon" width="70" height="70"/>
         <image name="LogoTransparent" width="320" height="138"/>
         <image name="MenuButton" width="123" height="50"/>
         <image name="ProximityIndicatorNotNear" width="123" height="50"/>
