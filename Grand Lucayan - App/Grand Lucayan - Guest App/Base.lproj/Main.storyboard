@@ -82,6 +82,9 @@
                                 <state key="normal" title="My Party" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dOT-kp-NCV" kind="push" id="jPn-ga-sba"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uK-Dn-Pjc">
                                 <rect key="frame" x="171" y="337" width="123" height="50"/>
@@ -93,7 +96,7 @@
                                 </state>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-BW-6lf">
-                                <rect key="frame" x="0.0" y="418" width="1080" height="130"/>
+                                <rect key="frame" x="0.0" y="418" width="700" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today’s forecast: Mostly sunny, afternoon showers, High of 86F" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="wHO-XF-Cew">
@@ -111,36 +114,24 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="SaE-76-1Ta">
-                                <rect key="frame" x="26" y="128" width="123" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="3sC-KO-ICn">
-                                <rect key="frame" x="171" y="128" width="123" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="QbG-8s-2ba">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="QbG-8s-2ba">
                                 <rect key="frame" x="171" y="197" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="zlN-0s-RBF">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="zlN-0s-RBF">
                                 <rect key="frame" x="171" y="267" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="HqN-Jy-yyr">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="HqN-Jy-yyr">
                                 <rect key="frame" x="171" y="337" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-kx-GsB">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-kx-GsB">
                                 <rect key="frame" x="26" y="197" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="adp-p3-FuF">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="adp-p3-FuF">
                                 <rect key="frame" x="26" y="267" width="123" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityIndicatorNotNear" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-CG-szl">
-                                <rect key="frame" x="26" y="337" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -156,7 +147,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yas-va-8fv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1395" y="102"/>
+            <point key="canvasLocation" x="623" y="102"/>
+        </scene>
+        <!--View Controller - My Party-->
+        <scene sceneID="J20-5A-x1F">
+            <objects>
+                <viewController id="dOT-kp-NCV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fQa-wZ-CML"/>
+                        <viewControllerLayoutGuide type="bottom" id="aJk-s6-zCO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RY6-40-m5r">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Party" id="iyK-2d-D3c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqY-Xi-SFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MxQ-Hd-R7V">
@@ -178,107 +188,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQ0-nT-16N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115" y="102"/>
-        </scene>
-        <!--Splash View Controller-->
-        <scene sceneID="Tv5-x5-BxT">
-            <objects>
-                <viewController id="5vS-MR-cSB" customClass="SplashViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TSU-Yv-GjL"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZXl-vV-6sx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rtm-sU-o93">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="LogoTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-er-IvH">
-                                <rect key="frame" x="0.0" y="198" width="320" height="138"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Peu-88-ads"/>
-                    <connections>
-                        <outlet property="logo" destination="3dW-er-IvH" id="YoV-9e-mgc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xWT-4s-FZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="558" y="-363"/>
-        </scene>
-        <!--Sign In View Controller - Sign In-->
-        <scene sceneID="nDB-qO-BjW">
-            <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="ulJ-D3-fdY" customClass="SignInViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vr9-dZ-AWq"/>
-                        <viewControllerLayoutGuide type="bottom" id="rzJ-Ne-2OZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Q0-4l-nyV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-vD-syO">
-                                <rect key="frame" x="42" y="27" width="236" height="48"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f04-U4-iQP">
-                                <rect key="frame" x="20" y="518" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="I forgot my password">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sls-Wh-TYn">
-                                <rect key="frame" x="21" y="174" width="278" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zsr-DP-2zP">
-                                        <rect key="frame" x="21" y="70" width="237" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="ulJ-D3-fdY" id="ChT-Dq-9CS"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-Vf-E7Z">
-                                        <rect key="frame" x="21" y="20" width="237" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="ulJ-D3-fdY" id="Y1e-Y9-k6v"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g0-PZ-Bgd">
-                                        <rect key="frame" x="20" y="144" width="238" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
-                                        <state key="normal" title="Sign In" backgroundImage="SmallLogo">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signIn:" destination="ulJ-D3-fdY" eventType="touchUpInside" id="I7k-p4-xwM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.62629900000000005" green="0.83814699999999998" blue="0.858518" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="b7I-yl-vLt"/>
-                    <connections>
-                        <outlet property="password" destination="zsr-DP-2zP" id="izM-nw-T9P"/>
-                        <outlet property="username" destination="rOV-Vf-E7Z" id="TD8-BT-18H"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ebC-C0-jJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="987" y="-374"/>
         </scene>
         <!--Activity View Controller-->
         <scene sceneID="rpq-M8-0Qy">
@@ -338,7 +247,6 @@
     </scenes>
     <resources>
         <image name="Clouds" width="1080" height="261"/>
-        <image name="Logo" width="208" height="183"/>
         <image name="LogoTransparent" width="320" height="138"/>
         <image name="MenuButton" width="123" height="50"/>
         <image name="ProximityIndicatorNotNear" width="123" height="50"/>
