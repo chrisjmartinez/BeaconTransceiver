@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A621D8341854D3FA001FA484 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529C91852601100E9ED2B /* CoreBluetooth.framework */; };
+		A621D8391854DBE1001FA484 /* WebserviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A621D8381854DBE1001FA484 /* WebserviceTests.m */; };
+		A621D83C1854DC1E001FA484 /* XCAsynchronousTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A621D83B1854DC1E001FA484 /* XCAsynchronousTestCase.m */; };
 		A69529CC1852601100E9ED2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529CA1852601100E9ED2B /* CoreLocation.framework */; };
 		A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6FE131854C89E0055DBEC /* BaseWebservice.m */; };
 		BF08366518523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
@@ -52,6 +54,9 @@
 		A621D8301854D0E4001FA484 /* libCoreNetworkCommunicationLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetworkCommunicationLibrary.a; path = "../Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator/libCoreNetworkCommunicationLibrary.a"; sourceTree = "<group>"; };
 		A621D8321854D3C7001FA484 /* libCoreNetworkCommunicationLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetworkCommunicationLibrary.a; path = "../Libraries/CoreNetworkCommunicationProject/Debug-iphoneos/libCoreNetworkCommunicationLibrary.a"; sourceTree = "<group>"; };
 		A621D8361854D6F0001FA484 /* libCoreNetworkCommunicationLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetworkCommunicationLibrary.a; path = "../Libraries/CoreNetworkCommunicationProject/Release-iphoneos/libCoreNetworkCommunicationLibrary.a"; sourceTree = "<group>"; };
+		A621D8381854DBE1001FA484 /* WebserviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceTests.m; sourceTree = "<group>"; };
+		A621D83A1854DC1E001FA484 /* XCAsynchronousTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAsynchronousTestCase.h; sourceTree = "<group>"; };
+		A621D83B1854DC1E001FA484 /* XCAsynchronousTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCAsynchronousTestCase.m; sourceTree = "<group>"; };
 		A69529C91852601100E9ED2B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A69529CA1852601100E9ED2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A6F6FE10185284490055DBEC /* BeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconDefinitions.h; path = ../BeaconDefinitions.h; sourceTree = "<group>"; };
@@ -192,8 +197,11 @@
 		BF58034018513A49007842A0 /* Grand Lucayan - Guest AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A621D83A1854DC1E001FA484 /* XCAsynchronousTestCase.h */,
+				A621D83B1854DC1E001FA484 /* XCAsynchronousTestCase.m */,
 				BF58034618513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m */,
 				BF58034118513A49007842A0 /* Supporting Files */,
+				A621D8381854DBE1001FA484 /* WebserviceTests.m */,
 			);
 			path = "Grand Lucayan - Guest AppTests";
 			sourceTree = "<group>";
@@ -326,6 +334,8 @@
 			files = (
 				BFEE6DE218539845001377B2 /* MyPartyViewController.m in Sources */,
 				BFB89D0818524DFF0084BEDD /* SignInViewController.m in Sources */,
+				A621D83C1854DC1E001FA484 /* XCAsynchronousTestCase.m in Sources */,
+				A621D8391854DBE1001FA484 /* WebserviceTests.m in Sources */,
 				BFB89D1018524E570084BEDD /* ActivityViewController.m in Sources */,
 				BF58034718513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m in Sources */,
 				BF08366618523A39000114FD /* LobbyViewController.m in Sources */,

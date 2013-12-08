@@ -34,5 +34,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>WebserverBaseURL</key>
+	<string>stokedsoft.com</string>
 </dict>
 </plist>
