@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A69529CB1852601100E9ED2B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529C91852601100E9ED2B /* CoreBluetooth.framework */; };
+		A621D8341854D3FA001FA484 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529C91852601100E9ED2B /* CoreBluetooth.framework */; };
 		A69529CC1852601100E9ED2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529CA1852601100E9ED2B /* CoreLocation.framework */; };
+		A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6FE131854C89E0055DBEC /* BaseWebservice.m */; };
 		BF08366518523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
 		BF08366618523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
 		BF58031C18513A49007842A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58031B18513A49007842A0 /* Foundation.framework */; };
@@ -48,9 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A621D8301854D0E4001FA484 /* libCoreNetworkCommunicationLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetworkCommunicationLibrary.a; path = "../Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator/libCoreNetworkCommunicationLibrary.a"; sourceTree = "<group>"; };
+		A621D8321854D3C7001FA484 /* libCoreNetworkCommunicationLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetworkCommunicationLibrary.a; path = "../Libraries/CoreNetworkCommunicationProject/Debug-iphoneos/libCoreNetworkCommunicationLibrary.a"; sourceTree = "<group>"; };
+		A621D8361854D6F0001FA484 /* libCoreNetworkCommunicationLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetworkCommunicationLibrary.a; path = "../Libraries/CoreNetworkCommunicationProject/Release-iphoneos/libCoreNetworkCommunicationLibrary.a"; sourceTree = "<group>"; };
 		A69529C91852601100E9ED2B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A69529CA1852601100E9ED2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A6F6FE10185284490055DBEC /* BeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconDefinitions.h; path = ../BeaconDefinitions.h; sourceTree = "<group>"; };
+		A6F6FE131854C89E0055DBEC /* BaseWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BaseWebservice.m; path = ../Shared/Webservices/BaseWebservice.m; sourceTree = "<group>"; };
 		BF08366318523A39000114FD /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyViewController.h; sourceTree = "<group>"; };
 		BF08366418523A39000114FD /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LobbyViewController.m; sourceTree = "<group>"; };
 		BF58031818513A49007842A0 /* Grand Lucayan - Guest App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grand Lucayan - Guest App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69529CB1852601100E9ED2B /* CoreBluetooth.framework in Frameworks */,
+				A621D8341854D3FA001FA484 /* CoreBluetooth.framework in Frameworks */,
 				A69529CC1852601100E9ED2B /* CoreLocation.framework in Frameworks */,
 				BF58031E18513A49007842A0 /* CoreGraphics.framework in Frameworks */,
 				BF58032018513A49007842A0 /* UIKit.framework in Frameworks */,
@@ -113,6 +118,7 @@
 		BF58030F18513A49007842A0 = {
 			isa = PBXGroup;
 			children = (
+				A6F6FE131854C89E0055DBEC /* BaseWebservice.m */,
 				A6F6FE10185284490055DBEC /* BeaconDefinitions.h */,
 				BF58032118513A49007842A0 /* Grand Lucayan - Guest App */,
 				BF58034018513A49007842A0 /* Grand Lucayan - Guest AppTests */,
@@ -133,6 +139,9 @@
 		BF58031A18513A49007842A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A621D8361854D6F0001FA484 /* libCoreNetworkCommunicationLibrary.a */,
+				A621D8321854D3C7001FA484 /* libCoreNetworkCommunicationLibrary.a */,
+				A621D8301854D0E4001FA484 /* libCoreNetworkCommunicationLibrary.a */,
 				A69529C91852601100E9ED2B /* CoreBluetooth.framework */,
 				A69529CA1852601100E9ED2B /* CoreLocation.framework */,
 				BF58031B18513A49007842A0 /* Foundation.framework */,
@@ -245,6 +254,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Grand Lucayan";
 				TargetAttributes = {
+					BF58031718513A49007842A0 = {
+						DevelopmentTeam = ZW82ETTB3F;
+					};
 					BF58033818513A49007842A0 = {
 						TestTargetID = BF58031718513A49007842A0;
 					};
@@ -295,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */,
 				BFB89D0318524D380084BEDD /* SplashViewController.m in Sources */,
 				BFB89D0B18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m in Sources */,
 				BF58033218513A49007842A0 /* ViewController.m in Sources */,
@@ -436,12 +449,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Graham Savage (L4EU45RM46)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Prefix.pch";
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject,
+					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator",
+					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lCoreNetworkCommunicationLibrary",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "294AA992-CD66-44D3-9D88-C1F681B2C00F";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -451,11 +475,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Prefix.pch";
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject,
+					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Release-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lCoreNetworkCommunicationLibrary",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "294AA992-CD66-44D3-9D88-C1F681B2C00F";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

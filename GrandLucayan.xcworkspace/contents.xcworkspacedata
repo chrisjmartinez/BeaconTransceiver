@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Shared">
+      <Group
+         location = "container:"
+         name = "Webservices">
+         <FileRef
+            location = "group:Shared/Webservices/BaseWebservice.h">
+         </FileRef>
+         <FileRef
+            location = "group:Shared/Webservices/BaseWebservice.m">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Libraries"
+      name = "Libraries">
+      <Group
+         location = "group:CoreNetworkCommunicationProject"
+         name = "CoreNetworkCommunicationProject">
+         <Group
+            location = "group:Debug-iphoneos"
+            name = "Debug-iphoneos">
+            <FileRef
+               location = "group:libCoreNetworkCommunicationLibrary.a">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Debug-iphonesimulator"
+            name = "Debug-iphonesimulator">
+            <FileRef
+               location = "group:libCoreNetworkCommunicationLibrary.a">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Release-iphoneos"
+            name = "Release-iphoneos">
+            <FileRef
+               location = "group:libCoreNetworkCommunicationLibrary.a">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Release-iphonesimulator"
+            name = "Release-iphonesimulator">
+            <FileRef
+               location = "group:libCoreNetworkConnectionManagementLibrary.a">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:include"
+            name = "include">
+            <Group
+               location = "group:CoreNetworkCommunicationLibrary"
+               name = "CoreNetworkCommunicationLibrary">
+               <FileRef
+                  location = "group:CoreNetworkCommunication.h">
+               </FileRef>
+               <FileRef
+                  location = "group:CoreNetworkCommunicationLibrary.h">
+               </FileRef>
+               <FileRef
+                  location = "group:CoreNetworkCommunicationProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:CoreNetworkCommunicationResponse.h">
+               </FileRef>
+               <FileRef
+                  location = "group:CoreNetworkCommunicationSettings.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NetworkCommunicationDefinitions.h">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
    <FileRef
       location = "group:Grand Lucayan - App/Grand Lucayan - Guest App.xcodeproj">
    </FileRef>
