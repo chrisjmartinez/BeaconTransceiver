@@ -7,7 +7,7 @@
 //
 
 #import "LobbyViewController.h"
-#import "../../BeaconDefinitions.h"
+#import "BeaconDefinitions.h"
 
 @interface LobbyViewController ()
 @property   (strong, nonatomic)     CLBeaconRegion      *diningBeaconRegion;

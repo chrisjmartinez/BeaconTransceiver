@@ -8,10 +8,10 @@
 
 #import <XCTest/XCTest.h>
 #import "XCAsynchronousTestCase.h"
-#import "../../Shared/Webservices/BaseWebservice.h"
-#import "../../Shared/Webservices/GuestWebservice.h"
-#import "../../Shared/Webservices/LocationWebservice.h"
-#import "../../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary/CoreNetworkCommunicationResponse.h"
+#import "BaseWebservice.h"
+#import "GuestWebservice.h"
+#import "LocationWebservice.h"
+#import "CoreNetworkCommunicationResponse.h"
 
 @interface WebserviceTests : XCAsynchronousTestCase <BaseWebserviceDelegate>
 @end

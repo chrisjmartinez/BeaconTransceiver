@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary/CoreNetworkCommunicationLibrary.h"
-#import "../../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary/CoreNetworkCommunicationProtocol.h"
+#import "CoreNetworkCommunicationLibrary.h"
+#import "CoreNetworkCommunicationProtocol.h"
 
 @class BaseWebservice;
 

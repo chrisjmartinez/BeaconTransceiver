@@ -471,15 +471,21 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Webservices",
+				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos7.0]" = (
 					"$(inherited)",
-					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Debug-iphoneos",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Debug-iphoneos",
 				);
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator7.0]" = (
 					"$(inherited)",
-					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -500,15 +506,21 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Webservices",
+				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos7.0]" = (
 					"$(inherited)",
-					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Release-iphoneos",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Release-iphoneos",
 				);
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator7.0]" = (
 					"$(inherited)",
-					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Release-iphonesimulator",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Release-iphonesimulator",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -536,6 +548,12 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Webservices",
+				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest AppTests/Grand Lucayan - Guest AppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -555,6 +573,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Webservices",
+				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest AppTests/Grand Lucayan - Guest AppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

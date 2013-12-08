@@ -7,14 +7,13 @@
 //
 
 #import "BaseWebservice.h"
-#import "../../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary/CoreNetworkCommunicationResponse.h"
+#import "CoreNetworkCommunicationResponse.h"
 
 @implementation BaseWebservice
 
 - (instancetype) init {
     NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
     
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     CoreNetworkCommunicationSettings * settings = [CoreNetworkCommunicationSettings new];
     settings.url = [NSURL URLWithString: @""];
     settings.showNetworkActivity = YES;
