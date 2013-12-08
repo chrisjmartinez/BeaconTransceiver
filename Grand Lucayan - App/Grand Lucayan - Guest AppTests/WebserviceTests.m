@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "XCAsynchronousTestCase.h"
 #import "../../Shared/Webservices/BaseWebservice.h"
+#import "../../Shared/Webservices/GuestWebservice.h"
+#import "../../Shared/Webservices/LocationWebservice.h"
 #import "../../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary/CoreNetworkCommunicationResponse.h"
 
 @interface WebserviceTests : XCAsynchronousTestCase <BaseWebserviceDelegate>
@@ -39,92 +41,67 @@
 
 - (void)testDeleteGuest
 {
-    BaseWebservice * webservice = [BaseWebservice new];
-    // /guest/:guest_id/location/:location_id
-    // Deletes a location once a guest leaves the practical range.
-    
-    // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@/guest/:guest_id/location/:location_id", webservice.baseURL];
-    webservice.networkCommunication.settings.url = [NSURL URLWithString:urlString];
+    GuestWebservice * webservice = [GuestWebservice new];
     webservice.delegate = self;
     
     [self startBlockWait];
     
-    [webservice DELETE];
+    [webservice deleteGuest:@"100" location:@"200"];
     
     [self waitForBlockToComplete];
 }
 
 - (void)testGetGuests
 {
-    BaseWebservice * webservice = [BaseWebservice new];
-    // /guests
-    // retrieves all guests
-    
-    // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@/guests", webservice.baseURL];
-    webservice.networkCommunication.settings.url = [NSURL URLWithString:urlString];
+    GuestWebservice * webservice = [GuestWebservice new];
     webservice.delegate = self;
     
     [self startBlockWait];
     
-    [webservice GET];
+    [webservice getGuests];
     
     [self waitForBlockToComplete];
 }
 
 - (void)testGetLocations
 {
-    BaseWebservice * webservice = [BaseWebservice new];
-    // /locations
-    // retrieves all locations
-    
-    // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@/locations", webservice.baseURL];
-    webservice.networkCommunication.settings.url = [NSURL URLWithString:urlString];
+    LocationWebservice * webservice = [LocationWebservice new];
     webservice.delegate = self;
     
     [self startBlockWait];
     
-    [webservice GET];
+    [webservice getLocations];
     
     [self waitForBlockToComplete];
 }
 
 - (void)testPostGuest
 {
-    BaseWebservice * webservice = [BaseWebservice new];
-    // /guest/:guest_id/
-    // creates a new guest and registers the device
-    //Body parameters: fname, lname, email, phone, device_id all required.
-    //Must be JSON.
-    
-    // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@/guest/:guest_id/", webservice.baseURL];
-    webservice.networkCommunication.settings.url = [NSURL URLWithString:urlString];
+    GuestWebservice * webservice = [GuestWebservice new];
     webservice.delegate = self;
     
     [self startBlockWait];
     
-    [webservice POST:nil];
+    Guest * guest = [Guest new];
+    guest.firstName = @"joe";
+    guest.lastName = @"smith";
+    guest.eMail = @"joe@aol.com";
+    guest.phoneNumber = @"555-555-5555";
+    guest.deviceID = @"1234";
+    
+    [webservice postGuest:@"100" guest:guest];
     
     [self waitForBlockToComplete];
 }
 
 - (void)testPutGuest
 {
-    BaseWebservice * webservice = [BaseWebservice new];
-    // /guest/:guest_id/location/:location_id/proximity/:proximity
-    // Ex. /guest/abc/location/def/proximity/100
-    //This service will update an existing guest location if it exists, or add it if it doesn't.  This way you can just constantly send locations without worrying about if it is a new location or not.
-    // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@/guest/:guest_id/location/:location_id/proximity/:proximity", webservice.baseURL];
-    webservice.networkCommunication.settings.url = [NSURL URLWithString:urlString];
+    GuestWebservice * webservice = [GuestWebservice new];
     webservice.delegate = self;
     
     [self startBlockWait];
     
-    [webservice PUT:nil];
+    [webservice putGuests:@"100" location:@"200" proximity:@"300"];
     
     [self waitForBlockToComplete];
 }

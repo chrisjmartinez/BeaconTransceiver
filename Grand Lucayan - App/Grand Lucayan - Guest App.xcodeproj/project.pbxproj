@@ -10,6 +10,8 @@
 		A621D8341854D3FA001FA484 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529C91852601100E9ED2B /* CoreBluetooth.framework */; };
 		A621D8391854DBE1001FA484 /* WebserviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A621D8381854DBE1001FA484 /* WebserviceTests.m */; };
 		A621D83C1854DC1E001FA484 /* XCAsynchronousTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A621D83B1854DC1E001FA484 /* XCAsynchronousTestCase.m */; };
+		A67B6DAB1854EC2400239902 /* GuestWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A67B6DA91854EC2400239902 /* GuestWebservice.m */; };
+		A67B6DAC1854EC2400239902 /* LocationWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A67B6DAA1854EC2400239902 /* LocationWebservice.m */; };
 		A69529CC1852601100E9ED2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529CA1852601100E9ED2B /* CoreLocation.framework */; };
 		A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6FE131854C89E0055DBEC /* BaseWebservice.m */; };
 		BF08366518523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
@@ -57,6 +59,8 @@
 		A621D8381854DBE1001FA484 /* WebserviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceTests.m; sourceTree = "<group>"; };
 		A621D83A1854DC1E001FA484 /* XCAsynchronousTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAsynchronousTestCase.h; sourceTree = "<group>"; };
 		A621D83B1854DC1E001FA484 /* XCAsynchronousTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCAsynchronousTestCase.m; sourceTree = "<group>"; };
+		A67B6DA91854EC2400239902 /* GuestWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GuestWebservice.m; path = ../Shared/Webservices/GuestWebservice.m; sourceTree = "<group>"; };
+		A67B6DAA1854EC2400239902 /* LocationWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LocationWebservice.m; path = ../Shared/Webservices/LocationWebservice.m; sourceTree = "<group>"; };
 		A69529C91852601100E9ED2B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A69529CA1852601100E9ED2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A6F6FE10185284490055DBEC /* BeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconDefinitions.h; path = ../BeaconDefinitions.h; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		BF58030F18513A49007842A0 = {
 			isa = PBXGroup;
 			children = (
+				A67B6DA91854EC2400239902 /* GuestWebservice.m */,
+				A67B6DAA1854EC2400239902 /* LocationWebservice.m */,
 				A6F6FE131854C89E0055DBEC /* BaseWebservice.m */,
 				A6F6FE10185284490055DBEC /* BeaconDefinitions.h */,
 				BF58032118513A49007842A0 /* Grand Lucayan - Guest App */,
@@ -315,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67B6DAB1854EC2400239902 /* GuestWebservice.m in Sources */,
+				A67B6DAC1854EC2400239902 /* LocationWebservice.m in Sources */,
 				A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */,
 				BFB89D0318524D380084BEDD /* SplashViewController.m in Sources */,
 				BFB89D0B18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m in Sources */,
@@ -464,11 +472,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Prefix.pch";
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos7.0]" = (
 					"$(inherited)",
-					/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject,
-					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator",
 					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator7.0]" = (
+					"$(inherited)",
+					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -490,10 +501,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Prefix.pch";
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos7.0]" = (
 					"$(inherited)",
-					/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject,
 					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Release-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator7.0]" = (
+					"$(inherited)",
+					"/Users/chrismartinez/Documents/Centric/Samples/RegionMonitor/BeaconTransceiver/Libraries/CoreNetworkCommunicationProject/Release-iphonesimulator",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

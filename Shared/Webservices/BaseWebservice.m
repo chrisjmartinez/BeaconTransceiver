@@ -12,7 +12,7 @@
 @implementation BaseWebservice
 
 - (instancetype) init {
-    NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+    NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
     
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     CoreNetworkCommunicationSettings * settings = [CoreNetworkCommunicationSettings new];
@@ -25,7 +25,7 @@
 }
 
 - (instancetype) initWithSettings:(CoreNetworkCommunicationSettings *)settings {
-     NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+     NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
     
     self = [super init];
     
@@ -56,7 +56,7 @@
     } else {
         // report connection error
         if (self.delegate) {
-             NSLog([NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
+             NSLog(@"%@", [NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
             NSError * error = [[NSError alloc] initWithDomain:NSArgumentDomain code:0 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"No Connectivity", @"No connectivity")}];
             [self.delegate serviceCallDidFailWithError:self withError:error];
         }
@@ -75,7 +75,7 @@
     } else {
         // report connection error
         if (self.delegate) {
-             NSLog([NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
+             NSLog(@"%@", [NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
             NSError * error = [[NSError alloc] initWithDomain:NSArgumentDomain code:0 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"No Connectivity", @"No connectivity")}];
             [self.delegate serviceCallDidFailWithError:self withError:error];
         }
@@ -95,7 +95,7 @@
     } else {
         // report connection error
         if (self.delegate) {
-             NSLog([NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
+             NSLog(@"%@", [NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
             NSError * error = [[NSError alloc] initWithDomain:NSArgumentDomain code:0 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"No Connectivity", @"No connectivity")}];
             [self.delegate serviceCallDidFailWithError:self withError:error];
         }
@@ -115,7 +115,7 @@
     } else {
         // report connection error
         if (self.delegate) {
-             NSLog([NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
+             NSLog(@"%@", [NSString stringWithFormat:@"No connectivity: %s", __PRETTY_FUNCTION__]);
             NSError * error = [[NSError alloc] initWithDomain:NSArgumentDomain code:0 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"No Connectivity", @"No connectivity")}];
             [self.delegate serviceCallDidFailWithError:self withError:error];
         }
@@ -125,7 +125,7 @@
 #pragma mark - CoreNetworkCommunicationDelegate
 
 - (void)networkCallDidFinishLoading:(CoreNetworkCommunicationResponse *)response {
-     NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+     NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
     
     switch (response.status) {
             // get the JSON Dictionary or Array
@@ -137,7 +137,7 @@
                 id object = [NSJSONSerialization JSONObjectWithData:response.data options:kNilOptions error:&error];
                 
                 if (error) {
-                     NSLog([NSString stringWithFormat:@"VitasWebservice JSON serializaion Failed %@",[error localizedDescription]]);
+                     NSLog(@"%@", [NSString stringWithFormat:@"VitasWebservice JSON serializaion Failed %@",[error localizedDescription]]);
                 } else {
                     // get the dictionary or array from the JSON object
                     if ([object isKindOfClass:[NSDictionary class]]) {
@@ -149,7 +149,7 @@
             }
             
             if (self.delegate) {
-                 NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+                 NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
                 [self.delegate serviceCallDidFinishLoading:self withResponse:response];
             }
             return;
@@ -161,7 +161,7 @@
     }
     
     if (self.delegate) {
-         NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+         NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
         NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:response.message forKey:NSLocalizedDescriptionKey];
         NSError * error = [[NSError alloc] initWithDomain:NSArgumentDomain code:response.status userInfo:dict];
         [self.delegate serviceCallDidFailWithError:self withError:error];
@@ -169,17 +169,17 @@
 }
 
 - (void)networkCallDidFailWithError:(NSError *)error {
-     NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+     NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
     
     if (self.delegate) {
-        NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+        NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
         [self.delegate serviceCallDidFailWithError:self withError:error];
     }
 }
 
 - (void)networkCallDidReceiveData:(NSData *)data {
     // no implementation required
-     NSLog([NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+     NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
 }
 
 @end

@@ -13,6 +13,18 @@
          <FileRef
             location = "group:Shared/Webservices/BaseWebservice.m">
          </FileRef>
+         <FileRef
+            location = "group:Shared/Webservices/GuestWebservice.h">
+         </FileRef>
+         <FileRef
+            location = "group:Shared/Webservices/GuestWebservice.m">
+         </FileRef>
+         <FileRef
+            location = "group:Shared/Webservices/LocationWebservice.h">
+         </FileRef>
+         <FileRef
+            location = "group:Shared/Webservices/LocationWebservice.m">
+         </FileRef>
       </Group>
    </Group>
    <Group
