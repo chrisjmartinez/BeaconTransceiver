@@ -109,6 +109,9 @@
                                 <state key="normal" image="TriangleButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="g8T-3G-saH" kind="push" id="tVi-ZR-pN5"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="ProximityIndicatorNotNear" id="QbG-8s-2ba">
                                 <rect key="frame" x="171" y="197" width="123" height="50"/>
@@ -207,6 +210,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqY-Xi-SFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1097" y="102"/>
+        </scene>
+        <!--Weather View Controller - Today's Forecast-->
+        <scene sceneID="IIV-cF-Cz9">
+            <objects>
+                <viewController id="g8T-3G-saH" customClass="WeatherViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uvs-7O-o38">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="Yzt-eZ-6j9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Today's Forecast" id="YGa-Zz-uWd"/>
+                    <connections>
+                        <outlet property="webView" destination="Yzt-eZ-6j9" id="edp-Tw-CeY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kme-e5-UtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="-621"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MxQ-Hd-R7V">
