@@ -40,10 +40,10 @@
 #endif
     self.guestWS = [[GuestWebservice alloc] init];
     self.guestWS.delegate = self;
-
+/*
     [self flashImage:self.spaLabel];
     [self flashImage:self.tennisLabel];
-    [self flashImage:self.diningLabel];
+    [self flashImage:self.diningLabel];*/
 }
 
 - (void)viewDidAppear:(BOOL)animated {
