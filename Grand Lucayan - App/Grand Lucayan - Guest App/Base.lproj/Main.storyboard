@@ -165,20 +165,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="BillIcon" id="9FC-s6-8g5">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" image="BillIcon" id="9FC-s6-8g5">
                                                     <rect key="frame" x="10" y="5" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KW4-uI-JzD">
-                                                    <rect key="frame" x="88" y="10" width="212" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KW4-uI-JzD">
+                                                    <rect key="frame" x="88" y="13" width="174" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="19"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Near the Senses Spa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9PC-kq-U0P">
-                                                    <rect key="frame" x="88" y="36" width="212" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Near the Senses Spa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9PC-kq-U0P">
+                                                    <rect key="frame" x="88" y="43" width="174" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -191,10 +192,17 @@
                                     <outlet property="delegate" destination="dOT-kp-NCV" id="g6v-DU-P7B"/>
                                 </connections>
                             </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="center" image="ProximityLozengeNear" id="d0g-7G-TO6">
+                                <rect key="frame" x="260" y="51" width="40" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Party" id="iyK-2d-D3c"/>
+                    <connections>
+                        <outlet property="table" destination="tX7-xE-fe5" id="xyi-pz-xlj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqY-Xi-SFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,6 +287,7 @@
         <image name="LogoTransparent" width="320" height="138"/>
         <image name="MenuButton" width="123" height="50"/>
         <image name="ProximityIndicatorNotNear" width="123" height="50"/>
+        <image name="ProximityLozengeNear" width="40" height="20"/>
         <image name="SmallLogo" width="208" height="183"/>
         <image name="TriangleButton" width="38" height="39"/>
         <image name="Whitebox" width="75" height="75"/>
