@@ -20,6 +20,7 @@
 @property   (strong, nonatomic)     CLLocationManager   *locationManager;
 @property   (nonatomic, retain)     IBOutlet    UIImageView     *weather;
 @property   (weak, nonatomic)       IBOutlet    UIImageView     *spaLabel, *tennisLabel, *diningLabel;
+@property   (weak, nonatomic)       IBOutlet    UILabel         *forecast;
 @property   (nonatomic, retain)     GuestWebservice     *guestWS;
 @end
 

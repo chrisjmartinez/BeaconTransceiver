@@ -139,6 +139,7 @@
                     <navigationItem key="navigationItem" id="hVe-we-WUJ"/>
                     <connections>
                         <outlet property="diningLabel" destination="QbG-8s-2ba" id="zJN-OX-XNx"/>
+                        <outlet property="forecast" destination="wHO-XF-Cew" id="0JW-ki-SbD"/>
                         <outlet property="spaLabel" destination="bTr-kx-GsB" id="Oyu-ku-do8"/>
                         <outlet property="tennisLabel" destination="HqN-Jy-yyr" id="Jjz-7g-9bZ"/>
                         <outlet property="weather" destination="mPa-BW-6lf" id="ReP-Pu-H5e"/>
@@ -146,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yas-va-8fv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="102"/>
+            <point key="canvasLocation" x="631" y="57"/>
         </scene>
         <!--My Party View Controller - My Party-->
         <scene sceneID="J20-5A-x1F">
