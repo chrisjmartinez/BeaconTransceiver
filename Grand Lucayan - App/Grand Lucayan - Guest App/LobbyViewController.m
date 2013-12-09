@@ -8,14 +8,19 @@
 
 #import "LobbyViewController.h"
 #import "BeaconDefinitions.h"
+#import "BaseWebservice.h"
+#import "GuestWebservice.h"
+#import "LocationWebservice.h"
+#import "CoreNetworkCommunicationResponse.h"
 
-@interface LobbyViewController ()
+@interface LobbyViewController () <BaseWebserviceDelegate>
 @property   (strong, nonatomic)     CLBeaconRegion      *diningBeaconRegion;
 @property   (strong, nonatomic)     CLBeaconRegion      *spaBeaconRegion;
 @property   (strong, nonatomic)     CLBeaconRegion      *tennisBeaconRegion;
 @property   (strong, nonatomic)     CLLocationManager   *locationManager;
 @property   (nonatomic, retain)     IBOutlet    UIImageView     *weather;
 @property   (weak, nonatomic)       IBOutlet    UIImageView     *spaLabel, *tennisLabel, *diningLabel;
+@property   (nonatomic, retain)     GuestWebservice     *guestWS;
 @end
 
 @implementation LobbyViewController
@@ -32,6 +37,8 @@
 #else
     [self initRegions];
 #endif
+    self.guestWS = [[GuestWebservice alloc] init];
+    self.guestWS.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -105,17 +112,17 @@
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
     CLBeacon *beacon = [beacons firstObject];
-    
+
     if ([region.identifier isEqualToString:diningProximityID]) {
-        [self proximityTextForBeacon:beacon andLabel:self.diningLabel];
+        [self setProximityOnButton:beacon andLabel:self.diningLabel identifier:region.identifier];
     } else if ([region.identifier isEqualToString:spaProximityID]) {
-        [self proximityTextForBeacon:beacon andLabel:self.spaLabel];
+        [self setProximityOnButton:beacon andLabel:self.spaLabel identifier:region.identifier];
     } else if ([region.identifier isEqualToString:tennisProximityID]) {
-        [self proximityTextForBeacon:beacon andLabel:self.tennisLabel];
+        [self setProximityOnButton:beacon andLabel:self.tennisLabel identifier:region.identifier];
     }
 }
 
-- (void)proximityTextForBeacon:(CLBeacon *)beacon andLabel:(UIImageView *)label {
+- (void)setProximityOnButton:(CLBeacon *)beacon andLabel:(UIImageView *)label identifier:(NSString *)identifier {
     UIImage *image = [UIImage imageNamed:@"ProximityIndicatorNotNear"];
     if (!beacon || beacon.proximity == CLProximityUnknown) {
         image = [UIImage imageNamed:@"ProximityIndicatorNotNear"];
@@ -129,5 +136,17 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         label.image = image;
     });
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
+    [self.guestWS putGuests:locationId location:locationId proximity:[NSString stringWithFormat:@"%d", beacon.proximity]];
 }
+
+#pragma mark - Service methods
+
+- (void)serviceCallDidFinishLoading:(BaseWebservice *)service withResponse:(CoreNetworkCommunicationResponse *)response {
+}
+
+- (void)serviceCallDidFailWithError:(BaseWebservice *)service withError:(NSError *)error {
+}
+
 @end

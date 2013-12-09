@@ -7,17 +7,47 @@
 //
 
 #import "MyPartyViewController.h"
+#import "BaseWebservice.h"
+#import "GuestWebservice.h"
+#import "LocationWebservice.h"
+#import "CoreNetworkCommunicationResponse.h"
 
-@interface MyPartyViewController ()
-
+@interface MyPartyViewController () <BaseWebserviceDelegate>
+@property   (nonatomic, assign)     BOOL                isShowing;
+@property   (nonatomic, retain)     GuestWebservice     *guestWS;
 @end
 
 @implementation MyPartyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.guestWS = [[GuestWebservice alloc] init];
+    self.guestWS.delegate = self;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.isShowing = YES;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        while (self.isShowing) {
+        }
+    });
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.isShowing = NO;
+    [super viewWillDisappear:animated];
+}
+
+#pragma mark - Service methods
+
+- (void)serviceCallDidFinishLoading:(BaseWebservice *)service withResponse:(CoreNetworkCommunicationResponse *)response {
+}
+
+- (void)serviceCallDidFailWithError:(BaseWebservice *)service withError:(NSError *)error {
+}
+
+#pragma mark - Table methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 6;
@@ -32,4 +62,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
+
+
 @end

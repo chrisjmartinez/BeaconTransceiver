@@ -40,6 +40,8 @@
 		BFB89D1018524E570084BEDD /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0E18524E570084BEDD /* ActivityViewController.m */; };
 		BFEE6DE118539845001377B2 /* MyPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6DE018539845001377B2 /* MyPartyViewController.m */; };
 		BFEE6DE218539845001377B2 /* MyPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6DE018539845001377B2 /* MyPartyViewController.m */; };
+		BFEE6DE41856028C001377B2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFEE6DE31856028C001377B2 /* Settings.bundle */; };
+		BFEE6DE51856028C001377B2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFEE6DE31856028C001377B2 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,7 @@
 		BFB89D0E18524E570084BEDD /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		BFEE6DDF18539845001377B2 /* MyPartyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPartyViewController.h; sourceTree = "<group>"; };
 		BFEE6DE018539845001377B2 /* MyPartyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPartyViewController.m; sourceTree = "<group>"; };
+		BFEE6DE31856028C001377B2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,7 @@
 				BF58032418513A49007842A0 /* InfoPlist.strings */,
 				BF58032718513A49007842A0 /* main.m */,
 				BF58032918513A49007842A0 /* Grand Lucayan - Guest App-Prefix.pch */,
+				BFEE6DE31856028C001377B2 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -269,7 +273,7 @@
 				ORGANIZATIONNAME = "Grand Lucayan";
 				TargetAttributes = {
 					BF58031718513A49007842A0 = {
-						DevelopmentTeam = ZW82ETTB3F;
+						DevelopmentTeam = HD6AC27BK2;
 					};
 					BF58033818513A49007842A0 = {
 						TestTargetID = BF58031718513A49007842A0;
@@ -300,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEE6DE41856028C001377B2 /* Settings.bundle in Resources */,
 				BF58033418513A49007842A0 /* Images.xcassets in Resources */,
 				BF58032618513A49007842A0 /* InfoPlist.strings in Resources */,
 				BF58032F18513A49007842A0 /* Main.storyboard in Resources */,
@@ -310,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEE6DE51856028C001377B2 /* Settings.bundle in Resources */,
 				BF58034518513A49007842A0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
