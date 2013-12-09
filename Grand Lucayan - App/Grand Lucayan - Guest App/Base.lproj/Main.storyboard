@@ -129,8 +129,20 @@
                                 <rect key="frame" x="26" y="197" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="ProximityIndicatorNotNear" id="EQU-42-Cxq">
+                                <rect key="frame" x="26" y="127" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="ProximityIndicatorNotNear" id="g8n-Ty-vT4">
+                                <rect key="frame" x="171" y="127" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="ProximityIndicatorNotNear" id="adp-p3-FuF">
                                 <rect key="frame" x="26" y="267" width="123" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="ProximityIndicatorNotNear" id="Fos-TI-lXB">
+                                <rect key="frame" x="26" y="337" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
