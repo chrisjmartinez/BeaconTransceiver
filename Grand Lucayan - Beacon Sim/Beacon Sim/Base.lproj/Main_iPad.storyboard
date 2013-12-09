@@ -16,12 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simulate a Beacon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhK-AD-M9j">
+                                <rect key="frame" x="270" y="411" width="229" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGray" translatesAutoresizingMaskIntoConstraints="NO" id="hgy-Gq-Kpj">
+                                <rect key="frame" x="246" y="535" width="77" height="104"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGreen" translatesAutoresizingMaskIntoConstraints="NO" id="IOz-b7-Zqq">
+                                <rect key="frame" x="246" y="644" width="77" height="104"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimotePurple" translatesAutoresizingMaskIntoConstraints="NO" id="D6d-SW-ZLN">
+                                <rect key="frame" x="246" y="753" width="77" height="104"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="BeaconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dRk-uK-K36">
+                                <rect key="frame" x="259" y="132" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPF-9Z-JH1">
-                                <rect key="frame" x="266" y="547" width="173" height="60"/>
+                                <rect key="frame" x="246" y="535" width="283" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="14" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Senses Spa" image="BeaconIcon">
+                                <inset key="titleEdgeInsets" minX="90" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Senses Spa">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,11 +52,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ3-sW-aqF">
-                                <rect key="frame" x="266" y="631" width="263" height="60"/>
+                                <rect key="frame" x="246" y="647" width="283" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="14" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Churchill's Restaurant" image="BeaconIcon">
+                                <inset key="titleEdgeInsets" minX="90" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Churchill's Restaurant">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,11 +65,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKb-iP-0BW">
-                                <rect key="frame" x="266" y="715" width="263" height="60"/>
+                                <rect key="frame" x="246" y="756" width="278" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="14" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Tennis School" image="BeaconIcon">
+                                <inset key="titleEdgeInsets" minX="90" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Tennis School">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -55,24 +77,6 @@
                                     <segue destination="iFw-qV-nxX" kind="push" id="pmq-77-N8E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simulate a Beacon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhK-AD-M9j">
-                                <rect key="frame" x="270" y="441" width="229" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGray" translatesAutoresizingMaskIntoConstraints="NO" id="7bK-ct-Ans">
-                                <rect key="frame" x="166" y="157" width="140" height="190"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGreen" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-qe-Egv">
-                                <rect key="frame" x="314" y="157" width="140" height="190"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimotePurple" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-BV-nd0">
-                                <rect key="frame" x="462" y="157" width="140" height="190"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -189,7 +193,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BeaconIcon" width="60" height="60"/>
+        <image name="BeaconLogo" width="250" height="250"/>
         <image name="ChurchillsLogo" width="149" height="225"/>
         <image name="EstimoteGray" width="140" height="190"/>
         <image name="EstimoteGreen" width="140" height="190"/>
