@@ -61,9 +61,17 @@
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="BeaconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="whG-aJ-rdd">
-                                <rect key="frame" x="259" y="110" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGray" translatesAutoresizingMaskIntoConstraints="NO" id="7bK-ct-Ans">
+                                <rect key="frame" x="166" y="157" width="140" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGreen" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-qe-Egv">
+                                <rect key="frame" x="314" y="157" width="140" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimotePurple" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-BV-nd0">
+                                <rect key="frame" x="462" y="157" width="140" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -72,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="-150"/>
+            <point key="canvasLocation" x="1740" y="-150"/>
         </scene>
         <!--Tennis Beacon View Controller - Tennis Beacon-->
         <scene sceneID="XwX-8E-zBI">
@@ -86,13 +94,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="BeaconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZCY-bX-4b8">
-                                <rect key="frame" x="334" y="65" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TennisLogo" translatesAutoresizingMaskIntoConstraints="NO" id="eNr-pQ-nn5">
-                                <rect key="frame" x="196" y="310" width="376" height="486"/>
+                                <rect key="frame" x="196" y="315" width="376" height="486"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimotePurple" translatesAutoresizingMaskIntoConstraints="NO" id="a2n-Q9-QwE">
+                                <rect key="frame" x="314" y="96" width="140" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -115,13 +123,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="BeaconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e3u-zk-aVh">
-                                <rect key="frame" x="334" y="66" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChurchillsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3Wl-tX-0W5">
-                                <rect key="frame" x="196" y="300" width="376" height="567"/>
+                                <rect key="frame" x="196" y="315" width="376" height="567"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGreen" translatesAutoresizingMaskIntoConstraints="NO" id="czv-Dz-7yQ">
+                                <rect key="frame" x="314" y="96" width="140" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -144,13 +152,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="BeaconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="umb-7V-F7l">
-                                <rect key="frame" x="334" y="66" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SensesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-BT-ADo">
-                                <rect key="frame" x="196" y="280" width="376" height="590"/>
+                                <rect key="frame" x="196" y="315" width="376" height="590"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGray" translatesAutoresizingMaskIntoConstraints="NO" id="Oiv-0e-DFJ">
+                                <rect key="frame" x="314" y="96" width="140" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -182,8 +190,10 @@
     </scenes>
     <resources>
         <image name="BeaconIcon" width="60" height="60"/>
-        <image name="BeaconLogo" width="250" height="250"/>
         <image name="ChurchillsLogo" width="149" height="225"/>
+        <image name="EstimoteGray" width="140" height="190"/>
+        <image name="EstimoteGreen" width="140" height="190"/>
+        <image name="EstimotePurple" width="140" height="190"/>
         <image name="SensesLogo" width="263" height="413"/>
         <image name="TennisLogo" width="637" height="825"/>
     </resources>
