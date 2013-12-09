@@ -20,7 +20,7 @@
                                 <rect key="frame" x="26" y="127" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Concierge" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -29,7 +29,7 @@
                                 <rect key="frame" x="171" y="127" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Find" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="26" y="197" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Senses Spa" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -47,7 +47,7 @@
                                 <rect key="frame" x="171" y="197" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Churchill's" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="26" y="267" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Golf" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -65,7 +65,7 @@
                                 <rect key="frame" x="171" y="267" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Casino" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -74,7 +74,7 @@
                                 <rect key="frame" x="26" y="337" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="My Party" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -86,7 +86,7 @@
                                 <rect key="frame" x="171" y="337" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Tennis School" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

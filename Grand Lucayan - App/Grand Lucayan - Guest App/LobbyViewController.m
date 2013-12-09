@@ -40,6 +40,10 @@
 #endif
     self.guestWS = [[GuestWebservice alloc] init];
     self.guestWS.delegate = self;
+
+    [self flashImage:self.spaLabel];
+    [self flashImage:self.tennisLabel];
+    [self flashImage:self.diningLabel];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -140,6 +144,13 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
     [self.guestWS putGuests:locationId location:locationId proximity:[NSString stringWithFormat:@"%d", beacon.proximity]];
+}
+
+- (void)flashImage:(UIImageView *)imageView {
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        imageView.alpha = 0;
+    } completion:^(BOOL finished) {
+    }];
 }
 
 #pragma mark - Service methods
