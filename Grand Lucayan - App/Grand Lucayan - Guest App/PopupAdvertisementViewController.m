@@ -9,17 +9,12 @@
 #import "PopupAdvertisementViewController.h"
 
 @interface PopupAdvertisementViewController ()
-@property   (nonatomic, retain)     IBOutlet    UILabel     *titleLabel, *message;
-@property   (nonatomic, retain)     IBOutlet    UIImageView *photo;
 @end
 
 @implementation PopupAdvertisementViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	NSString *name = [prefs stringForKey:@"identifier_preference"];
-    self.message.text = [self.message.text stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
 }
 
 

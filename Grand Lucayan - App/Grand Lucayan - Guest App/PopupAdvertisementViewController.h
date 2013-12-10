@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface PopupAdvertisementViewController : UIViewController
-
+@property   (nonatomic, retain)     IBOutlet    UIImageView *photo;
+@property   (nonatomic, retain)     IBOutlet    UILabel     *titleLabel, *message;
+@property   (nonatomic, retain)     CLBeaconRegion          *region;
 @end

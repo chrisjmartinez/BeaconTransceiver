@@ -334,7 +334,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SpaPhoto" id="V5i-Gs-oev">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SpaPhoto" id="V5i-Gs-oev">
                                 <rect key="frame" x="50" y="117" width="221" height="162"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
