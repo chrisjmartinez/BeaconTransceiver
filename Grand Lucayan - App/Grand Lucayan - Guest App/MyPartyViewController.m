@@ -50,7 +50,7 @@
                 [self.table reloadData];
             });
             // Fire another request after a one second pause
-            [NSThread sleepForTimeInterval:1];
+            [NSThread sleepForTimeInterval:2];
             [self.guestWS getGuests];
         }
     }
@@ -73,10 +73,9 @@
     UIImageView *face = (UIImageView *)[cell viewWithTag:1];
     face.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Icon", guest.ID]];
     UILabel *name = (UILabel *)[cell viewWithTag:2];
-#warning This needs to be .Id once Chris adds it
-    name.text = guest.firstName;
+    name.text = guest.ID;
     UILabel *location = (UILabel *)[cell viewWithTag:3];
-    //location.text = [NSString stringWithFormat:@"Near the %@", guest.location.Id];
+    location.text = [NSString stringWithFormat:@"Near the %@", guest.proximityID];
 	return cell;
 }
 
