@@ -162,7 +162,9 @@ SystemSoundID	soundFileObject;
             }
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
             NSString *name = [prefs stringForKey:@"identifier_preference"];
-            self.advertisement.message.text = [self.advertisement.message.text stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
+            if (name != nil) {
+                self.advertisement.message.text = [self.advertisement.message.text stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
+            }
             [UIView animateWithDuration:.3 animations:^{
                 self.advertisement.view.alpha = 1;
             } completion:^(BOOL finished) {
