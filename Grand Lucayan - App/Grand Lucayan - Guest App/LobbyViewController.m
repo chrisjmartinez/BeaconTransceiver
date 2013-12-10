@@ -127,30 +127,53 @@ SystemSoundID	soundFileObject;
     if ([region.identifier isEqualToString:diningProximityID]) {
         [self setProximityOnButton:beacon andLabel:self.diningLabel identifier:region.identifier];
     } else if ([region.identifier isEqualToString:spaProximityID]) {
-        if (!self.advertisement && beacon.proximity == CLProximityNear) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.advertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PopupAdvertisementViewController"];
-                self.advertisement.view.alpha = 0;
-                [self.view.window.rootViewController.view addSubview:self.advertisement.view];
-                AudioServicesPlaySystemSound(soundFileObject);
-                [UIView animateWithDuration:.3 animations:^{
-                    self.advertisement.view.alpha = 1;
-                } completion:^(BOOL finished) {
-                }];
-            });
-        } else if (self.advertisement && beacon.proximity != CLProximityNear) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [UIView animateWithDuration:.3 animations:^{
-                    self.advertisement.view.alpha = 0;
-                } completion:^(BOOL finished) {
-                    [self.advertisement.view removeFromSuperview];
-                    self.advertisement = nil;
-                }];
-            });
-        }
         [self setProximityOnButton:beacon andLabel:self.spaLabel identifier:region.identifier];
     } else if ([region.identifier isEqualToString:tennisProximityID]) {
         [self setProximityOnButton:beacon andLabel:self.tennisLabel identifier:region.identifier];
+    }
+    [self showAdvertisementForBeacon:beacon region:region];
+}
+
+- (void)showAdvertisementForBeacon:(CLBeacon *)beacon region:(CLBeaconRegion *)region {
+    if (self.advertisement && ![self.advertisement.region.identifier isEqualToString:region.identifier]) {
+        // If ad is already showing for a different beacon, do nothing
+        return;
+    }
+    
+    if (!self.advertisement && (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) ) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            AudioServicesPlaySystemSound(soundFileObject);
+            self.advertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PopupAdvertisementViewController"];
+            self.advertisement.region = region;
+            self.advertisement.view.alpha = 0;
+            [self.view.window.rootViewController.view addSubview:self.advertisement.view];
+            if ([region.identifier isEqualToString:spaProximityID]) {
+                self.advertisement.message.text = @"Hi XXXX,\n\nThe Senses Spa has an opening for a pedicure right now.\nWould you like to have this before your massage appointment in 30 minutes?\n\nJust walk on in";
+                self.advertisement.photo.image = [UIImage imageNamed:@"SpaPhoto"];
+                self.advertisement.titleLabel.text = @"Senses Spa & Fitness Center";
+            } else if ([region.identifier isEqualToString:tennisProximityID]) {
+                self.advertisement.message.text = @"Hi XXXX,\n\nDon't forget your tennis lesson with Jake in 35 minutes.";
+                self.advertisement.photo.image = [UIImage imageNamed:@"TennisPhoto"];
+                self.advertisement.titleLabel.text = @"Tennis Pro Shop";
+            } else if ([region.identifier isEqualToString:diningProximityID]) {
+            }
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            NSString *name = [prefs stringForKey:@"identifier_preference"];
+            self.advertisement.message.text = [self.advertisement.message.text stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
+            [UIView animateWithDuration:.3 animations:^{
+                self.advertisement.view.alpha = 1;
+            } completion:^(BOOL finished) {
+            }];
+        });
+    } else if (self.advertisement && beacon.proximity != CLProximityNear && beacon.proximity != CLProximityImmediate) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:.3 animations:^{
+                self.advertisement.view.alpha = 0;
+            } completion:^(BOOL finished) {
+                [self.advertisement.view removeFromSuperview];
+                self.advertisement = nil;
+            }];
+        });
     }
 }
 

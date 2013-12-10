@@ -31,6 +31,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self initBeacon];
+	[UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
