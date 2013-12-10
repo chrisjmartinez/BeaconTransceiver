@@ -46,7 +46,7 @@
     
     // set the JSON headers
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSString *loginString = @"user@domain.com";
+    NSString *loginString = @"token";
     NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
     NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  [encodedLoginData base64Encoding]];
     NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
@@ -68,7 +68,7 @@
 - (void) GET {
     // set the JSON headers & add the session token
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSString *loginString = @"user@domain.com";
+    NSString *loginString = @"token";
     NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
     NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  loginString];
     NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
@@ -91,7 +91,7 @@
     
     // set the JSON headers & add the session token
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSString *loginString = @"user@domain.com";
+    NSString *loginString = @"token";
     NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
     NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  [encodedLoginData base64Encoding]];
     NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
@@ -114,7 +114,7 @@
     
     // set the JSON headers & add the session token
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSString *loginString = @"user@domain.com";
+    NSString *loginString = @"token";
     NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
     NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  [encodedLoginData base64Encoding]];
     NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
