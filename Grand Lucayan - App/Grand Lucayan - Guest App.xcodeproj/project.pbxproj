@@ -44,6 +44,8 @@
 		BFEE6DE51856028C001377B2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFEE6DE31856028C001377B2 /* Settings.bundle */; };
 		BFEE6DE818562F96001377B2 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6DE718562F96001377B2 /* WeatherViewController.m */; };
 		BFEE6DE918562F96001377B2 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6DE718562F96001377B2 /* WeatherViewController.m */; };
+		BFEE6DEE18574619001377B2 /* PopupAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6DED18574619001377B2 /* PopupAdvertisementViewController.m */; };
+		BFEE6DEF18574619001377B2 /* PopupAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6DED18574619001377B2 /* PopupAdvertisementViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		BFEE6DE31856028C001377B2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BFEE6DE618562F96001377B2 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		BFEE6DE718562F96001377B2 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		BFEE6DEC18574619001377B2 /* PopupAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupAdvertisementViewController.h; sourceTree = "<group>"; };
+		BFEE6DED18574619001377B2 /* PopupAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupAdvertisementViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 				BFEE6DDF18539845001377B2 /* MyPartyViewController.h */,
 				BFEE6DE018539845001377B2 /* MyPartyViewController.m */,
 				BF58032D18513A49007842A0 /* Main.storyboard */,
+				BFEE6DEC18574619001377B2 /* PopupAdvertisementViewController.h */,
+				BFEE6DED18574619001377B2 /* PopupAdvertisementViewController.m */,
 				BFB89D0518524DFF0084BEDD /* SignInViewController.h */,
 				BFB89D0618524DFF0084BEDD /* SignInViewController.m */,
 				BFB89D0118524D380084BEDD /* SplashViewController.h */,
@@ -340,6 +346,7 @@
 				BFB89D0B18524E4D0084BEDD /* UIViewController+LookAndFeelCustomizations.m in Sources */,
 				BF58033218513A49007842A0 /* ViewController.m in Sources */,
 				BFEE6DE118539845001377B2 /* MyPartyViewController.m in Sources */,
+				BFEE6DEE18574619001377B2 /* PopupAdvertisementViewController.m in Sources */,
 				BF58032C18513A49007842A0 /* AppDelegate.m in Sources */,
 				BF58032818513A49007842A0 /* main.m in Sources */,
 				BFB89D0718524DFF0084BEDD /* SignInViewController.m in Sources */,
@@ -354,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFEE6DE218539845001377B2 /* MyPartyViewController.m in Sources */,
+				BFEE6DEF18574619001377B2 /* PopupAdvertisementViewController.m in Sources */,
 				BFB89D0818524DFF0084BEDD /* SignInViewController.m in Sources */,
 				A621D83C1854DC1E001FA484 /* XCAsynchronousTestCase.m in Sources */,
 				BFEE6DE918562F96001377B2 /* WeatherViewController.m in Sources */,

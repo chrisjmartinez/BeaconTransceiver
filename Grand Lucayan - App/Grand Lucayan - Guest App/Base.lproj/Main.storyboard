@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yas-va-8fv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631" y="57"/>
+            <point key="canvasLocation" x="619" y="102"/>
         </scene>
         <!--My Party View Controller - My Party-->
         <scene sceneID="J20-5A-x1F">
@@ -222,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqY-Xi-SFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="102"/>
+            <point key="canvasLocation" x="1261" y="102"/>
         </scene>
         <!--Weather View Controller - Today's Forecast-->
         <scene sceneID="IIV-cF-Cz9">
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kme-e5-UtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="-621"/>
+            <point key="canvasLocation" x="1261" y="-621"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MxQ-Hd-R7V">
@@ -321,6 +321,55 @@
             </objects>
             <point key="canvasLocation" x="138" y="-177"/>
         </scene>
+        <!--Popup Advertisement View Controller-->
+        <scene sceneID="DBf-TW-HFF">
+            <objects>
+                <viewController storyboardIdentifier="PopupAdvertisementViewController" id="mS3-vf-621" customClass="PopupAdvertisementViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zTF-ZM-91Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="WhiteBackground" id="HhR-KR-WFC">
+                                <rect key="frame" x="22" y="78" width="280" height="408"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SpaPhoto" id="V5i-Gs-oev">
+                                <rect key="frame" x="50" y="117" width="221" height="162"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senses Spa &amp; Fitness Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w7Z-Ud-KZs">
+                                <rect key="frame" x="50" y="91" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYo-MZ-bWX">
+                                <rect key="frame" x="55" y="281" width="211" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Hi XXXX,
+
+The Senses Spa has an opening for a pedicure right now.
+
+Would you like to have this before your massage appointment in 30 minutes?
+
+Just walk on in</string>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="yYo-MZ-bWX" id="uic-cQ-f83"/>
+                        <outlet property="photo" destination="V5i-Gs-oev" id="y2a-gp-ydj"/>
+                        <outlet property="titleLabel" destination="w7Z-Ud-KZs" id="i1B-8a-5Fq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tno-hd-goN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-621"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BillIcon" width="70" height="70"/>
@@ -330,7 +379,9 @@
         <image name="ProximityIndicatorNotNear" width="123" height="50"/>
         <image name="ProximityLozengeNear" width="40" height="20"/>
         <image name="SmallLogo" width="208" height="183"/>
+        <image name="SpaPhoto" width="221" height="162"/>
         <image name="TriangleButton" width="38" height="39"/>
+        <image name="WhiteBackground" width="46" height="48"/>
         <image name="Whitebox" width="75" height="75"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
