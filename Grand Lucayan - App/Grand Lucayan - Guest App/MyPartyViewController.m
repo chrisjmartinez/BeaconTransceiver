@@ -31,14 +31,6 @@
     [super viewWillAppear:animated];
     self.isShowing = YES;
     [self.guestWS getGuests];
-    /*
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        while (self.isShowing) {
-            [self.guestWS getGuests];
-            [NSThread sleepForTimeInterval:2];
-        }
-    });
-     */
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -57,7 +49,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.table reloadData];
             });
-            // Fire another request after a second pause
+            // Fire another request after a one second pause
             [NSThread sleepForTimeInterval:1];
             [self.guestWS getGuests];
         }
@@ -71,14 +63,20 @@
 #pragma mark - Table methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
     return self.guests.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = @"Cell";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+    Guest *guest = [self.guests objectAtIndex:indexPath.row];
+    UIImageView *face = (UIImageView *)[cell viewWithTag:1];
+    face.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Icon", guest.firstName]];
+    UILabel *name = (UILabel *)[cell viewWithTag:2];
+#warning This needs to be .Id once Chris adds it
+    name.text = guest.firstName;
+    UILabel *location = (UILabel *)[cell viewWithTag:3];
+    //location.text = [NSString stringWithFormat:@"Near the %@", guest.location.Id];
 	return cell;
 }
 
