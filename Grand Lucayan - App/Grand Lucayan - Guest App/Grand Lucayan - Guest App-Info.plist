@@ -35,6 +35,6 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>WebserverBaseURL</key>
-	<string>stokedsoft.com</string>
+	<string> http://getjulie.com:3000</string>
 </dict>
 </plist>

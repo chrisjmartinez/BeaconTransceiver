@@ -46,7 +46,10 @@
     
     // set the JSON headers
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json"};
+    NSString *loginString = @"user@domain.com";
+    NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
+    NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  [encodedLoginData base64Encoding]];
+    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
     settings.headers = headers;
     
 #warning Add reachability to server
@@ -65,7 +68,10 @@
 - (void) GET {
     // set the JSON headers & add the session token
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json"};
+    NSString *loginString = @"user@domain.com";
+    NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
+    NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  loginString];
+    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
     settings.headers = headers;
     
 #warning Add reachability to server
@@ -85,7 +91,10 @@
     
     // set the JSON headers & add the session token
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json"};
+    NSString *loginString = @"user@domain.com";
+    NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
+    NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  [encodedLoginData base64Encoding]];
+    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
     settings.headers = headers;
     
 #warning Add reachability to server
@@ -105,7 +114,10 @@
     
     // set the JSON headers & add the session token
     CoreNetworkCommunicationSettings *settings = [self.networkCommunication settings];
-    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json"};
+    NSString *loginString = @"user@domain.com";
+    NSData *encodedLoginData=[loginString dataUsingEncoding:NSASCIIStringEncoding];
+    NSString *authHeader=[NSString stringWithFormat:@"Basic %@",  [encodedLoginData base64Encoding]];
+    NSDictionary *headers = @{@"Content-Type": @"application/json", @"Accept": @"application/json", @"Authorization": authHeader};
     settings.headers = headers;
     
 #warning Add reachability to server
