@@ -46,7 +46,7 @@
     // retrieves all guests
     
     // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@:%d/guests", self.baseURL, self.port];
+    NSString *urlString = [NSString stringWithFormat:@"%@:%d/guest/locations/all", self.baseURL, self.port];
     self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
     
     self.type = GuestWebserviceTypeGet;
