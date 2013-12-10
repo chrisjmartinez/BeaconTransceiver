@@ -293,7 +293,7 @@
 				ORGANIZATIONNAME = "Grand Lucayan";
 				TargetAttributes = {
 					BF58031718513A49007842A0 = {
-						DevelopmentTeam = ZW82ETTB3F;
+						DevelopmentTeam = C739J5GD46;
 					};
 					BF58033818513A49007842A0 = {
 						TestTargetID = BF58031718513A49007842A0;
@@ -527,7 +527,7 @@
 					"-lCoreNetworkCommunicationLibrary",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "294AA992-CD66-44D3-9D88-C1F681B2C00F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -563,7 +563,7 @@
 					"-lCoreNetworkCommunicationLibrary",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "294AA992-CD66-44D3-9D88-C1F681B2C00F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
