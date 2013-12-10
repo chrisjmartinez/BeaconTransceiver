@@ -24,6 +24,7 @@
 @property (weak, nonatomic) id <BaseWebserviceDelegate> delegate;
 @property (strong, nonatomic) id<CoreNetworkCommunicationProtocol> networkCommunication;
 @property (copy, nonatomic) NSString * baseURL;
+@property (assign, nonatomic) NSInteger port;
 @property (assign, nonatomic) NSInteger tag;
 @property (strong, nonatomic) NSDictionary * dictionary;
 @property (strong, nonatomic) NSArray * array;

@@ -37,6 +37,7 @@
         
         // Reads the value of the custom key I added to the Info.plist
         self.baseURL = [mainBundle objectForInfoDictionaryKey:@"WebserverBaseURL"];
+        self.port = [[mainBundle objectForInfoDictionaryKey:@"WebserverPort"] integerValue];
     }
     
     return self;

@@ -28,7 +28,7 @@
     // retrieves all locations
     
     // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@/locations", self.baseURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@:%d/locations", self.baseURL, self.port];
     
     self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
     
