@@ -156,6 +156,9 @@ SystemSoundID	soundFileObject;
                 self.advertisement.photo.image = [UIImage imageNamed:@"TennisPhoto"];
                 self.advertisement.titleLabel.text = @"Tennis Pro Shop";
             } else if ([region.identifier isEqualToString:diningProximityID]) {
+                self.advertisement.message.text = @"Hi XXXX,\n\nCome and enjoy a wonderful meal at Churchill's";
+                self.advertisement.photo.image = [UIImage imageNamed:@"DiningPhoto"];
+                self.advertisement.titleLabel.text = @"Churchill's Restaurant";
             }
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
             NSString *name = [prefs stringForKey:@"identifier_preference"];
