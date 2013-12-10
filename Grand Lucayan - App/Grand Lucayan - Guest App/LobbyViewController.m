@@ -140,7 +140,7 @@ SystemSoundID	soundFileObject;
         return;
     }
     
-    if (!self.advertisement && beacon.proximity == CLProximityNear) {
+    if (!self.advertisement && (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) ) {
         dispatch_async(dispatch_get_main_queue(), ^{
             AudioServicesPlaySystemSound(soundFileObject);
             self.advertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PopupAdvertisementViewController"];
@@ -165,7 +165,7 @@ SystemSoundID	soundFileObject;
             } completion:^(BOOL finished) {
             }];
         });
-    } else if (self.advertisement && beacon.proximity != CLProximityNear) {
+    } else if (self.advertisement && beacon.proximity != CLProximityNear && beacon.proximity != CLProximityImmediate) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:.3 animations:^{
                 self.advertisement.view.alpha = 0;
