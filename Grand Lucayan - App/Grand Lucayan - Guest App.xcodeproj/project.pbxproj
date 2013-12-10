@@ -10,6 +10,7 @@
 		A621D8341854D3FA001FA484 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529C91852601100E9ED2B /* CoreBluetooth.framework */; };
 		A621D8391854DBE1001FA484 /* WebserviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A621D8381854DBE1001FA484 /* WebserviceTests.m */; };
 		A621D83C1854DC1E001FA484 /* XCAsynchronousTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A621D83B1854DC1E001FA484 /* XCAsynchronousTestCase.m */; };
+		A66FBD581857BD96008FC8BA /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = A66FBD571857BD96008FC8BA /* Guest.m */; };
 		A67B6DAB1854EC2400239902 /* GuestWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A67B6DA91854EC2400239902 /* GuestWebservice.m */; };
 		A67B6DAC1854EC2400239902 /* LocationWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A67B6DAA1854EC2400239902 /* LocationWebservice.m */; };
 		A69529CC1852601100E9ED2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529CA1852601100E9ED2B /* CoreLocation.framework */; };
@@ -67,6 +68,7 @@
 		A621D8381854DBE1001FA484 /* WebserviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceTests.m; sourceTree = "<group>"; };
 		A621D83A1854DC1E001FA484 /* XCAsynchronousTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAsynchronousTestCase.h; sourceTree = "<group>"; };
 		A621D83B1854DC1E001FA484 /* XCAsynchronousTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCAsynchronousTestCase.m; sourceTree = "<group>"; };
+		A66FBD571857BD96008FC8BA /* Guest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Guest.m; path = ../Shared/Factories/Guest.m; sourceTree = "<group>"; };
 		A67B6DA91854EC2400239902 /* GuestWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GuestWebservice.m; path = ../Shared/Webservices/GuestWebservice.m; sourceTree = "<group>"; };
 		A67B6DAA1854EC2400239902 /* LocationWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LocationWebservice.m; path = ../Shared/Webservices/LocationWebservice.m; sourceTree = "<group>"; };
 		A69529C91852601100E9ED2B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -141,6 +143,7 @@
 		BF58030F18513A49007842A0 = {
 			isa = PBXGroup;
 			children = (
+				A66FBD571857BD96008FC8BA /* Guest.m */,
 				A67B6DA91854EC2400239902 /* GuestWebservice.m */,
 				A67B6DAA1854EC2400239902 /* LocationWebservice.m */,
 				A6F6FE131854C89E0055DBEC /* BaseWebservice.m */,
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66FBD581857BD96008FC8BA /* Guest.m in Sources */,
 				BFEE6DE218539845001377B2 /* MyPartyViewController.m in Sources */,
 				BFEE6DEF18574619001377B2 /* PopupAdvertisementViewController.m in Sources */,
 				BFB89D0818524DFF0084BEDD /* SignInViewController.m in Sources */,
@@ -503,6 +507,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Factories",
 					"$(SRCROOT)/../Shared//Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
@@ -538,6 +543,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Factories",
 					"$(SRCROOT)/../Shared//Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
@@ -580,6 +586,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Factories",
 					"$(SRCROOT)/../Shared//Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest AppTests/Grand Lucayan - Guest AppTests-Info.plist";
@@ -605,6 +612,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared//Factories",
 					"$(SRCROOT)/../Shared//Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest AppTests/Grand Lucayan - Guest AppTests-Info.plist";

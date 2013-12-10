@@ -6,6 +6,16 @@
       name = "Shared">
       <Group
          location = "container:"
+         name = "Factories">
+         <FileRef
+            location = "group:Shared/Factories/Guest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Shared/Factories/Guest.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Webservices">
          <FileRef
             location = "group:Shared/Webservices/BaseWebservice.h">

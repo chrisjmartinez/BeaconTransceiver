@@ -7,6 +7,7 @@
 //
 
 #import "BaseWebservice.h"
+#include "Guest.h"
 
 typedef enum {
     GuestWebserviceTypeDelete = 1,
@@ -14,17 +15,6 @@ typedef enum {
     GuestWebserviceTypePost = 3,
     GuestWebserviceTypePut = 4,
 } GuestWebserviceType;
-
-@interface Guest : NSObject
-@property (strong, nonatomic) NSString * ID;
-@property (strong, nonatomic) NSString * firstName;
-@property (strong, nonatomic) NSString * lastName;
-@property (strong, nonatomic) NSString * eMail;
-@property (strong, nonatomic) NSString * phoneNumber;
-@property (strong, nonatomic) NSString * deviceID;
-@property (strong, nonatomic) NSString * locationID;
-@property (strong, nonatomic) NSString * proximityID;
-@end
 
 @interface GuestWebservice : BaseWebservice
 

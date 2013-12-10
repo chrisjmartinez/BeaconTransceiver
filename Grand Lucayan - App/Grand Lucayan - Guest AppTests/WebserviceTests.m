@@ -113,6 +113,18 @@
     XCTAssertNotNil(response, @"serviceCallDidFinishLoading");
     XCTAssertFalse(response.status == 0, @"Status should never be 0.");
     _data = response.data;
+    NSArray * guests = nil;
+    
+    switch (service.type) {
+        case GuestWebserviceTypeDelete:
+            break;
+            
+        case GuestWebserviceTypeGet:
+            guests = [Guest guestsFromJSON:service.dictionary];
+            XCTAssertNotNil(guests, @"guest is nil");
+        default:
+            break;
+    }
 }
 
 - (void)serviceCallDidFailWithError:(BaseWebservice *)service withError:(NSError *)error {
