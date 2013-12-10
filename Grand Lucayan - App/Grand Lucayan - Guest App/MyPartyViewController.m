@@ -71,7 +71,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     Guest *guest = [self.guests objectAtIndex:indexPath.row];
     UIImageView *face = (UIImageView *)[cell viewWithTag:1];
-    face.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Icon", guest.firstName]];
+    face.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Icon", guest.ID]];
     UILabel *name = (UILabel *)[cell viewWithTag:2];
 #warning This needs to be .Id once Chris adds it
     name.text = guest.firstName;
