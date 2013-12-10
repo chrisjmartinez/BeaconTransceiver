@@ -46,6 +46,7 @@
     if (self.isShowing) {
         if (service.dictionary) {
             self.guests = [Guest guestsFromJSON:service.dictionary];
+            [self filterGuests];
             // Update the display with new data
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.table reloadData];
@@ -55,6 +56,27 @@
             [self.guestWS getGuests];
         }
     }
+}
+
+- (void)filterGuests {
+    NSMutableDictionary *collection = [NSMutableDictionary dictionary];
+    for (Guest *guest in self.guests) {
+        if ([collection objectForKey:guest.ID]) {
+            Guest *existing = [collection objectForKey:guest.ID];
+            if (guest.proximity > existing.proximity) {
+                [collection setObject:guest forKey:guest.ID];
+            }
+        } else {
+            [collection setObject:guest forKey:guest.ID];
+        }
+    }
+    NSMutableArray *filtered = [NSMutableArray array];
+    for (Guest * guest in [collection allValues]) {
+        if (guest.proximity != CLProximityUnknown) {
+            [filtered addObject:guest];
+        }
+    }
+    self.guests = filtered;
 }
 
 - (void)serviceCallDidFailWithError:(BaseWebservice *)service withError:(NSError *)error {
@@ -89,7 +111,7 @@
     } else if ([locationID isEqualToString:tennisProximityID]) {
         return @"Tennis Pro Shop";
     } else if ([locationID isEqualToString:diningProximityID]) {
-        return @"Churchill's Restaurant";
+        return @"Churchill's";
     }
     return locationID;
 }
