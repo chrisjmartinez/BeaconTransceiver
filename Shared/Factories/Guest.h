@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface Guest : NSObject
 
@@ -17,7 +18,7 @@
 @property (strong, nonatomic) NSString * phoneNumber;
 @property (strong, nonatomic) NSString * deviceID;
 @property (strong, nonatomic) NSString * locationID;
-@property (strong, nonatomic) NSString * proximityID;
+@property (assign, nonatomic) CLProximity proximity;
 
 + (NSArray *)guestsFromJSON:(NSDictionary *)json;
 

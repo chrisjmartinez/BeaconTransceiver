@@ -64,6 +64,7 @@
         
         guest.ID = [obj objectForKey:@"guest_id"];
         guest.locationID = [obj objectForKey:@"location_id"];
+        guest.proximity = [[obj objectForKey:@"proximity"] integerValue];
         
         [guests addObject:guest];
     }
