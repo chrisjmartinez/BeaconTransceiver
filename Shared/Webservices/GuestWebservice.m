@@ -8,9 +8,6 @@
 
 #import "GuestWebservice.h"
 
-@implementation Guest
-@end
-
 @implementation GuestWebservice
 
 - (instancetype) init {

@@ -14,6 +14,7 @@
 		A67B6DAB1854EC2400239902 /* GuestWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A67B6DA91854EC2400239902 /* GuestWebservice.m */; };
 		A67B6DAC1854EC2400239902 /* LocationWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A67B6DAA1854EC2400239902 /* LocationWebservice.m */; };
 		A69529CC1852601100E9ED2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529CA1852601100E9ED2B /* CoreLocation.framework */; };
+		A6A858201857C438006E4E97 /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = A66FBD571857BD96008FC8BA /* Guest.m */; };
 		A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6FE131854C89E0055DBEC /* BaseWebservice.m */; };
 		BF08366518523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
 		BF08366618523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
@@ -348,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A858201857C438006E4E97 /* Guest.m in Sources */,
 				A67B6DAB1854EC2400239902 /* GuestWebservice.m in Sources */,
 				A67B6DAC1854EC2400239902 /* LocationWebservice.m in Sources */,
 				A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "BaseWebservice.h"
-#include "Guest.h"
+#import "Guest.h"
 
 typedef enum {
     GuestWebserviceTypeDelete = 1,

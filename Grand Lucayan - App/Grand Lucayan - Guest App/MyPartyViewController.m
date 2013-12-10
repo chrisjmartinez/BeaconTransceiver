@@ -11,6 +11,7 @@
 #import "GuestWebservice.h"
 #import "LocationWebservice.h"
 #import "CoreNetworkCommunicationResponse.h"
+#import "Guest.h"
 
 @interface MyPartyViewController () <BaseWebserviceDelegate>
 @property   (nonatomic, assign)     BOOL                            isShowing;
@@ -42,9 +43,8 @@
 
 - (void)serviceCallDidFinishLoading:(BaseWebservice *)service withResponse:(CoreNetworkCommunicationResponse *)response {
     if (self.isShowing) {
-        NSError     *error = nil;
-        self.guests = [service array];
-        if (!error) {
+        if (service.dictionary) {
+            self.guests = [Guest guestsFromJSON:service.dictionary];
             // Update the display with new data
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.table reloadData];
