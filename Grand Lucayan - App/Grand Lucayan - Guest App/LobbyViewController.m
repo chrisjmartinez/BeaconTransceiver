@@ -12,6 +12,7 @@
 #import "GuestWebservice.h"
 #import "LocationWebservice.h"
 #import "CoreNetworkCommunicationResponse.h"
+#import "PopupAdvertisementViewController.h"
 
 @interface LobbyViewController () <BaseWebserviceDelegate>
 @property   (strong, nonatomic)     CLBeaconRegion      *diningBeaconRegion;
@@ -22,6 +23,7 @@
 @property   (weak, nonatomic)       IBOutlet    UIImageView     *spaLabel, *tennisLabel, *diningLabel;
 @property   (weak, nonatomic)       IBOutlet    UILabel         *forecast;
 @property   (nonatomic, retain)     GuestWebservice     *guestWS;
+@property   (nonatomic, retain)     PopupAdvertisementViewController    *advertisement;
 @end
 
 @implementation LobbyViewController
@@ -121,6 +123,27 @@
     if ([region.identifier isEqualToString:diningProximityID]) {
         [self setProximityOnButton:beacon andLabel:self.diningLabel identifier:region.identifier];
     } else if ([region.identifier isEqualToString:spaProximityID]) {
+        if (!self.advertisement && beacon.proximity == CLProximityNear) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.advertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PopupAdvertisementViewController"];
+                self.advertisement.view.alpha = 0;
+                [self.view.window.rootViewController.view addSubview:self.advertisement.view];
+                [UIView animateWithDuration:.3 animations:^{
+                    self.advertisement.view.alpha = 1;
+                } completion:^(BOOL finished) {
+                
+                }];
+            });
+        } else if (self.advertisement && beacon.proximity != CLProximityNear) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [UIView animateWithDuration:.3 animations:^{
+                    self.advertisement.view.alpha = 0;
+                } completion:^(BOOL finished) {
+                    [self.advertisement.view removeFromSuperview];
+                    self.advertisement = nil;
+                }];
+            });
+        }
         [self setProximityOnButton:beacon andLabel:self.spaLabel identifier:region.identifier];
     } else if ([region.identifier isEqualToString:tennisProximityID]) {
         [self setProximityOnButton:beacon andLabel:self.tennisLabel identifier:region.identifier];
