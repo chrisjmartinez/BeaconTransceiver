@@ -12,6 +12,7 @@
 #import "LocationWebservice.h"
 #import "CoreNetworkCommunicationResponse.h"
 #import "Guest.h"
+#import "BeaconDefinitions.h"
 
 @interface MyPartyViewController () <BaseWebserviceDelegate>
 @property   (nonatomic, assign)     BOOL                            isShowing;
@@ -75,12 +76,22 @@
     UILabel *name = (UILabel *)[cell viewWithTag:2];
     name.text = guest.ID;
     UILabel *location = (UILabel *)[cell viewWithTag:3];
-    location.text = [NSString stringWithFormat:@"Near the %@", guest.proximityID];
+    location.text = [NSString stringWithFormat:@"Nearest place: %@", [self displayNameForLocationID:guest.locationID]];
 	return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
+- (NSString *)displayNameForLocationID:(NSString *)locationID {
+    if ([locationID isEqualToString:spaProximityID]) {
+        return @"Sense Spa";
+    } else if ([locationID isEqualToString:tennisProximityID]) {
+        return @"Tennis Pro Shop";
+    } else if ([locationID isEqualToString:diningProximityID]) {
+        return @"Churchill's Restaurant";
+    }
+    return locationID;
+}
 
 @end

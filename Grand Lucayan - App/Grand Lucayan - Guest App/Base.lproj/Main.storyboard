@@ -192,13 +192,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Near the Senses Spa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9PC-kq-U0P">
-                                                    <rect key="frame" x="88" y="43" width="174" height="21"/>
+                                                    <rect key="frame" x="88" y="43" width="212" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ProximityLozengeNear" id="zlA-EC-i3g">
+                                                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ProximityLozengeNear" id="zlA-EC-i3g">
                                                     <rect key="frame" x="260" y="30" width="40" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
