@@ -35,7 +35,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>WebserverBaseURL</key>
-	<string>http://token@getjulie.com</string>
+	<string>http://getjulie.com</string>
 	<key>WebserverPort</key>
 	<integer>3000</integer>
 </dict>

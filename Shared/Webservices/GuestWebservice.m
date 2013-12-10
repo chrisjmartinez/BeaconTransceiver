@@ -82,7 +82,6 @@
 }
 
 - (void)putGuests:(NSString *)guestID location:(NSString *)locationID proximity:(NSString *)proximityID {
-    
     NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
     
     // /guest/:guest_id/location/:location_id/proximity/:proximity
