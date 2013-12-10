@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Grand Lucayan. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
 #import "LobbyViewController.h"
 #import "BeaconDefinitions.h"
 #import "BaseWebservice.h"
@@ -14,7 +15,10 @@
 #import "CoreNetworkCommunicationResponse.h"
 #import "PopupAdvertisementViewController.h"
 
-@interface LobbyViewController () <BaseWebserviceDelegate>
+@interface LobbyViewController () <BaseWebserviceDelegate> {
+CFURLRef		soundFileURLRef;
+SystemSoundID	soundFileObject;
+}
 @property   (strong, nonatomic)     CLBeaconRegion      *diningBeaconRegion;
 @property   (strong, nonatomic)     CLBeaconRegion      *spaBeaconRegion;
 @property   (strong, nonatomic)     CLBeaconRegion      *tennisBeaconRegion;
@@ -42,10 +46,10 @@
 #endif
     self.guestWS = [[GuestWebservice alloc] init];
     self.guestWS.delegate = self;
-/*
-    [self flashImage:self.spaLabel];
-    [self flashImage:self.tennisLabel];
-    [self flashImage:self.diningLabel];*/
+
+    soundFileURLRef = (__bridge CFURLRef)([[NSBundle mainBundle] URLForResource: @"Alert" withExtension: @"m4a"]);
+    // Create a system sound object representing the sound file.
+    AudioServicesCreateSystemSoundID (soundFileURLRef, &soundFileObject);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -128,10 +132,10 @@
                 self.advertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PopupAdvertisementViewController"];
                 self.advertisement.view.alpha = 0;
                 [self.view.window.rootViewController.view addSubview:self.advertisement.view];
+                AudioServicesPlaySystemSound(soundFileObject);
                 [UIView animateWithDuration:.3 animations:^{
                     self.advertisement.view.alpha = 1;
                 } completion:^(BOOL finished) {
-                
                 }];
             });
         } else if (self.advertisement && beacon.proximity != CLProximityNear) {
