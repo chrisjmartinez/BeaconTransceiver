@@ -63,6 +63,18 @@
     [self waitForBlockToComplete];
 }
 
+- (void)testGetGuestsForAllLocations
+{
+    GuestWebservice * webservice = [GuestWebservice new];
+    webservice.delegate = self;
+    
+    [self startBlockWait];
+    
+    [webservice getGuestsForAllLocations];
+    
+    [self waitForBlockToComplete];
+}
+
 - (void)testGetLocations
 {
     LocationWebservice * webservice = [LocationWebservice new];
@@ -122,6 +134,12 @@
         case GuestWebserviceTypeGet:
             guests = [Guest guestsFromJSON:service.dictionary];
             XCTAssertNotNil(guests, @"guest is nil");
+            break;
+            
+        case GuestWebserviceTypeGetAllLocations:
+            guests = [Guest guestsFromJSON:service.dictionary];
+            XCTAssertNotNil(guests, @"guest is nil");
+            break;
         default:
             break;
     }

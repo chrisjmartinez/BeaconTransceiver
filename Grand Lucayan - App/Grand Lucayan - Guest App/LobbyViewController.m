@@ -198,7 +198,7 @@ SystemSoundID	soundFileObject;
     });
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
-    [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", beacon.proximity]];
+    [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%ld", beacon.proximity]];
 }
 
 - (void)flashImage:(UIImageView *)imageView {
