@@ -136,16 +136,19 @@ CLProximity     lastTennisProximity;
     CLBeacon *beacon = [beacons firstObject];
 
     if ([region.identifier isEqualToString:diningProximityID]) {
-        [self setProximityOnButton:beacon andLabel:self.diningLabel identifier:region.identifier];
+        [self setProximityOnButton:beacon andLabel:self.diningLabel identifier:region];
     } else if ([region.identifier isEqualToString:spaProximityID]) {
-        [self setProximityOnButton:beacon andLabel:self.spaLabel identifier:region.identifier];
+        [self setProximityOnButton:beacon andLabel:self.spaLabel identifier:region];
     } else if ([region.identifier isEqualToString:tennisProximityID]) {
-        [self setProximityOnButton:beacon andLabel:self.tennisLabel identifier:region.identifier];
+        [self setProximityOnButton:beacon andLabel:self.tennisLabel identifier:region];
     }
     [self showAdvertisementForBeacon:beacon region:region];
 }
 
 - (void)showAdvertisementForBeacon:(CLBeacon *)beacon region:(CLBeaconRegion *)region {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *name = [prefs stringForKey:@"identifier_preference"];
+    
     if (self.navigationController.topViewController != self) {
         // Supress ad if lobby is not showing
         return;
@@ -154,28 +157,8 @@ CLProximity     lastTennisProximity;
         // If ad is already showing for a different beacon, do nothing
         return;
     }
-    
     if (!self.advertisement && (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) ) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            NSString *name = [prefs stringForKey:@"identifier_preference"];
-            if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    UILocalNotification *alert = [[UILocalNotification alloc] init];
-                    alert.alertAction = @"Grand Lucayan";
-                    if ([region.identifier isEqualToString:spaProximityID]) {
-                        alert.alertBody = @"Hi XXXX, The Senses Spa has an opening for a pedicure right now.";
-                    } else if ([region.identifier isEqualToString:tennisProximityID]) {
-                        alert.alertBody = @"Hi XXXX, Don't forget your tennis lesson with Jake in 35 minutes.";
-                    } else if ([region.identifier isEqualToString:diningProximityID]) {
-                        alert.alertBody = @"Hi XXXX, Come and enjoy a wonderful meal at Churchill's";
-                    }
-                    alert.alertBody = [alert.alertBody stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
-                    alert.applicationIconBadgeNumber = 1;
-                    alert.soundName = @"Alert.m4a";
-                    [[UIApplication sharedApplication] presentLocalNotificationNow:alert];
-                });
-            }
             AudioServicesPlaySystemSound(soundFileObject);
             self.advertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PopupAdvertisementViewController"];
             self.advertisement.region = region;
@@ -214,7 +197,7 @@ CLProximity     lastTennisProximity;
     }
 }
 
-- (void)setProximityOnButton:(CLBeacon *)beacon andLabel:(UIImageView *)label identifier:(NSString *)identifier {
+- (void)setProximityOnButton:(CLBeacon *)beacon andLabel:(UIImageView *)label identifier:(CLBeaconRegion *)region {
     UIImage *image = [UIImage imageNamed:@"ProximityIndicatorNotNear"];
     CLProximity proximity = CLProximityUnknown;
     
@@ -252,19 +235,51 @@ CLProximity     lastTennisProximity;
         if ([beacon.minor intValue] == diningBeacon) {
             if (proximity != lastDiningProximity) {
                 lastDiningProximity = proximity;
-                [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+                [self.guestWS putGuests:locationId location:region.identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+                if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+                    [self showBackgroundAlertForBeacon:beacon region:region];
+                }
             }
         } else if ([beacon.minor intValue] == spaBeacon) {
             if (proximity != lastSpaProximity) {
                 lastSpaProximity = proximity;
-                [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+                [self.guestWS putGuests:locationId location:region.identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+                if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+                    [self showBackgroundAlertForBeacon:beacon region:region];
+                }
             }
         } else if ([beacon.minor intValue] == tennisBeacon) {
             if (proximity != lastTennisProximity) {
                 lastTennisProximity = proximity;
-                [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+                [self.guestWS putGuests:locationId location:region.identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+                if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+                    [self showBackgroundAlertForBeacon:beacon region:region];
+                }
             }
         }
+    }
+}
+
+- (void)showBackgroundAlertForBeacon:(CLBeacon *)beacon region:(CLBeaconRegion *)region {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *name = [prefs stringForKey:@"identifier_preference"];
+    
+    if (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UILocalNotification *alert = [[UILocalNotification alloc] init];
+            alert.alertAction = @"Grand Lucayan";
+            if ([region.identifier isEqualToString:spaProximityID]) {
+                alert.alertBody = @"Hi XXXX, The Senses Spa has an opening for a pedicure right now.";
+            } else if ([region.identifier isEqualToString:tennisProximityID]) {
+                alert.alertBody = @"Hi XXXX, Don't forget your tennis lesson with Jake in 35 minutes.";
+            } else if ([region.identifier isEqualToString:diningProximityID]) {
+                alert.alertBody = @"Hi XXXX, Come and enjoy a wonderful meal at Churchill's";
+            }
+            alert.alertBody = [alert.alertBody stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
+            alert.applicationIconBadgeNumber = 1;
+            alert.soundName = @"Alert.m4a";
+            [[UIApplication sharedApplication] presentLocalNotificationNow:alert];
+        });
     }
 }
 
