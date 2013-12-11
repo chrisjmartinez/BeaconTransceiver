@@ -32,7 +32,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.isShowing = YES;
-    [self.guestWS getGuests];
+    [self.guestWS getGuestsForAllLocations];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -53,7 +53,7 @@
             });
             // Fire another request after a one second pause
             [NSThread sleepForTimeInterval:2];
-            [self.guestWS getGuests];
+            [self.guestWS getGuestsForAllLocations];
         }
     }
 }
