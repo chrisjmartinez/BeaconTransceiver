@@ -79,17 +79,17 @@ CLProximity     lastTennisProximity;
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:proximityUUID];
     
     // Dining
-    self.diningBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:diningProximityID];
+    self.diningBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:grandLucayaResort minor:diningBeacon identifier:diningProximityID];
     self.diningBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.diningBeaconRegion];
     
     // Spa
-    self.spaBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:spaProximityID];
+    self.spaBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:grandLucayaResort minor:spaBeacon identifier:spaProximityID];
     self.spaBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.spaBeaconRegion];
     
     // Tennis
-    self.tennisBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:tennisProximityID];
+    self.tennisBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid  major:grandLucayaResort minor:tennisBeacon identifier:tennisProximityID];
     self.tennisBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.tennisBeaconRegion];
 }
