@@ -160,19 +160,21 @@ CLProximity     lastTennisProximity;
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
             NSString *name = [prefs stringForKey:@"identifier_preference"];
             if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
-                UILocalNotification *alert = [[UILocalNotification alloc] init];
-                alert.alertAction = @"Grand Lucayan";
-                if ([region.identifier isEqualToString:spaProximityID]) {
-                    alert.alertBody = @"Hi XXXX, The Senses Spa has an opening for a pedicure right now.";
-                } else if ([region.identifier isEqualToString:tennisProximityID]) {
-                    alert.alertBody = @"Hi XXXX, Don't forget your tennis lesson with Jake in 35 minutes.";
-                } else if ([region.identifier isEqualToString:diningProximityID]) {
-                    alert.alertBody = @"Hi XXXX, Come and enjoy a wonderful meal at Churchill's";
-                }
-                alert.alertBody = [alert.alertBody stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
-                alert.applicationIconBadgeNumber = 1;
-                alert.soundName = @"Alert.m4a";
-                [[UIApplication sharedApplication] presentLocalNotificationNow:alert];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UILocalNotification *alert = [[UILocalNotification alloc] init];
+                    alert.alertAction = @"Grand Lucayan";
+                    if ([region.identifier isEqualToString:spaProximityID]) {
+                        alert.alertBody = @"Hi XXXX, The Senses Spa has an opening for a pedicure right now.";
+                    } else if ([region.identifier isEqualToString:tennisProximityID]) {
+                        alert.alertBody = @"Hi XXXX, Don't forget your tennis lesson with Jake in 35 minutes.";
+                    } else if ([region.identifier isEqualToString:diningProximityID]) {
+                        alert.alertBody = @"Hi XXXX, Come and enjoy a wonderful meal at Churchill's";
+                    }
+                    alert.alertBody = [alert.alertBody stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
+                    alert.applicationIconBadgeNumber = 1;
+                    alert.soundName = @"Alert.m4a";
+                    [[UIApplication sharedApplication] presentLocalNotificationNow:alert];
+                });
             }
             AudioServicesPlaySystemSound(soundFileObject);
             self.advertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PopupAdvertisementViewController"];
