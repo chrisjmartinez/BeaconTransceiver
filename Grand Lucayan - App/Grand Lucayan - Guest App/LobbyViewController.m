@@ -158,6 +158,8 @@ CLProximity     lastTennisProximity;
     
     if (!self.advertisement && (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) ) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            NSString *name = [prefs stringForKey:@"identifier_preference"];
             if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
                 UILocalNotification *alert = [[UILocalNotification alloc] init];
                 alert.alertAction = @"Grand Lucayan";
@@ -168,6 +170,7 @@ CLProximity     lastTennisProximity;
                 } else if ([region.identifier isEqualToString:diningProximityID]) {
                     alert.alertBody = @"Hi XXXX, Come and enjoy a wonderful meal at Churchill's";
                 }
+                alert.alertBody = [alert.alertBody stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
                 alert.applicationIconBadgeNumber = 1;
                 alert.soundName = @"Alert.m4a";
                 [[UIApplication sharedApplication] presentLocalNotificationNow:alert];
@@ -190,8 +193,6 @@ CLProximity     lastTennisProximity;
                 self.advertisement.photo.image = [UIImage imageNamed:@"DiningPhoto"];
                 self.advertisement.titleLabel.text = @"Churchill's Restaurant";
             }
-            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            NSString *name = [prefs stringForKey:@"identifier_preference"];
             if (name != nil) {
                 self.advertisement.message.text = [self.advertisement.message.text stringByReplacingOccurrencesOfString:@"XXXX" withString:name];
             }
