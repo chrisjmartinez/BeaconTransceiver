@@ -37,8 +37,7 @@ CLProximity     lastTennisProximity;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *dateString = [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
-    self.navigationItem.title = dateString;
+    self.navigationItem.title = @"Today";
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
