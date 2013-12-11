@@ -97,7 +97,14 @@ SystemSoundID	soundFileObject;
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     NSLog(@"Beacon Found");
-    
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+        UILocalNotification *alert = [[UILocalNotification alloc] init];
+        alert.alertAction = @"Grand Lucayan";
+        alert.alertBody = @"Hello";
+        alert.applicationIconBadgeNumber = 1;
+        alert.soundName = @"Alert.m4a";
+        [[UIApplication sharedApplication] presentLocalNotificationNow:alert];
+    }
     if ([region.identifier isEqualToString:diningProximityID])
         [self.locationManager startRangingBeaconsInRegion:self.diningBeaconRegion];
     
