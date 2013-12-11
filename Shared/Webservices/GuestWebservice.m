@@ -28,7 +28,7 @@
     // Deletes a location once a guest leaves the practical range.
     
     // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@:%d/guest/%@/location/%@", self.baseURL, self.port, guestID, locationID];
+    NSString *urlString = [NSString stringWithFormat:@"%@:%ld/guest/%@/location/%@", self.baseURL, (long)self.port, guestID, locationID];
     self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
     
     self.type = GuestWebserviceTypeDelete;
@@ -43,13 +43,28 @@
     // retrieves all guests
     
     // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@:%d/guest/locations/all", self.baseURL, self.port];
+    NSString *urlString = [NSString stringWithFormat:@"%@:%ld/guests", self.baseURL, (long)self.port];
     self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
     
     self.type = GuestWebserviceTypeGet;
     
     [self GET];
     
+}
+
+- (void)getGuestsForAllLocations {
+    NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+    
+    // /guests
+    // retrieves all guests for all locations
+    
+    // set the webservice URL
+    NSString *urlString = [NSString stringWithFormat:@"%@:%ld/guest/locations/all", self.baseURL, (long)self.port];
+    self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
+    
+    self.type = GuestWebserviceTypeGetAllLocations;
+    
+    [self GET];
 }
 
 - (void)postGuest:(NSString *)guestID guest:(Guest *)guest {
@@ -61,7 +76,7 @@
     //Must be JSON.
     
     // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@:%d/guest/%@/", self.baseURL, self.port, guestID];
+    NSString *urlString = [NSString stringWithFormat:@"%@:%ld/guest/%@/", self.baseURL, (long)self.port, guestID];
     self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
     
     NSDictionary * body = @{@"fname": guest.firstName,
@@ -85,7 +100,7 @@
     // Ex. /guest/abc/location/def/proximity/100
     //This service will update an existing guest location if it exists, or add it if it doesn't.  This way you can just constantly send locations without worrying about if it is a new location or not.
     // set the webservice URL
-    NSString *urlString = [NSString stringWithFormat:@"%@:%d/guest/%@/location/%@/proximity/%@", self.baseURL, self.port, guestID, locationID, proximityID];
+    NSString *urlString = [NSString stringWithFormat:@"%@:%ld/guest/%@/location/%@/proximity/%@", self.baseURL, (long)self.port, guestID, locationID, proximityID];
     self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
     
     self.type = GuestWebserviceTypePut;

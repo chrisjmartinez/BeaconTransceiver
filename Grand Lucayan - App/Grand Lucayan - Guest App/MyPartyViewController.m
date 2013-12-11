@@ -67,7 +67,9 @@
                 [collection setObject:guest forKey:guest.ID];
             }
         } else {
-            [collection setObject:guest forKey:guest.ID];
+            if (guest.ID) {
+                [collection setObject:guest forKey:guest.ID];
+            }
         }
     }
     NSMutableArray *filtered = [NSMutableArray array];
