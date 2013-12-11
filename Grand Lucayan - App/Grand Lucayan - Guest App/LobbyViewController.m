@@ -76,21 +76,20 @@ CLProximity     lastTennisProximity;
 #pragma mark - Private methods
 
 - (void)initRegions {
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:proximityUUID];
+    
     // Dining
-    NSUUID *uuidDining = [[NSUUID alloc] initWithUUIDString:diningUUID];
-    self.diningBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidDining identifier:diningProximityID];
+    self.diningBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:diningProximityID];
     self.diningBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.diningBeaconRegion];
     
     // Spa
-    NSUUID *uuidSpa = [[NSUUID alloc] initWithUUIDString:spaUUID];
-    self.spaBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidSpa identifier:spaProximityID];
+    self.spaBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:spaProximityID];
     self.spaBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.spaBeaconRegion];
     
     // Tennis
-    NSUUID *uuidTennis = [[NSUUID alloc] initWithUUIDString:tennisUUID];
-    self.tennisBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidTennis identifier:tennisProximityID];
+    self.tennisBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:tennisProximityID];
     self.tennisBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.tennisBeaconRegion];
 }
@@ -247,18 +246,18 @@ CLProximity     lastTennisProximity;
 	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
     
     // only tell the server if something has changed, your battery thanks you
-    if (beacon) {
-        if ([[beacon.proximityUUID UUIDString] isEqualToString:diningUUID]) {
+    if (beacon && [beacon.major intValue] == grandLucayaResort) {
+        if ([beacon.minor intValue] == diningBeacon) {
             if (proximity != lastDiningProximity) {
                 lastDiningProximity = proximity;
                 [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
             }
-        } else if ([[beacon.proximityUUID UUIDString] isEqualToString:spaUUID]) {
+        } else if ([beacon.minor intValue] == spaBeacon) {
             if (proximity != lastSpaProximity) {
                 lastSpaProximity = proximity;
                 [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
             }
-        } else if ([[beacon.proximityUUID UUIDString] isEqualToString:tennisUUID]) {
+        } else if ([beacon.minor intValue] == tennisBeacon) {
             if (proximity != lastTennisProximity) {
                 lastTennisProximity = proximity;
                 [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];

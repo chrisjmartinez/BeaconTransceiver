@@ -60,10 +60,10 @@
 
 #pragma mark - Private methods
 - (void)initBeacon {
-    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:spaUUID];
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:proximityUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                                major:1
-                                                                minor:1
+                                                                major:grandLucayaResort
+                                                                minor:spaBeacon
                                                            identifier:spaProximityID];
 }
 
