@@ -74,9 +74,9 @@
     }
     NSMutableArray *filtered = [NSMutableArray array];
     for (Guest * guest in [collection allValues]) {
-        if (guest.proximity != CLProximityUnknown) {
+        //if (guest.proximity != CLProximityUnknown) {
             [filtered addObject:guest];
-        }
+        //}
     }
     self.guests = filtered;
 }
@@ -100,7 +100,13 @@
     UILabel *name = (UILabel *)[cell viewWithTag:2];
     name.text = guest.ID;
     UILabel *location = (UILabel *)[cell viewWithTag:3];
-    location.text = [NSString stringWithFormat:@"Nearest place: %@", [self displayNameForLocationID:guest.locationID]];
+    if (guest.proximity == CLProximityUnknown) {
+        location.text = @"Location Unknown";
+        location.textColor = [UIColor redColor];
+    } else {
+        location.text = [NSString stringWithFormat:@"Nearest place: %@", [self displayNameForLocationID:guest.locationID]];
+        location.textColor = [UIColor colorWithRed:0 green:0.6 blue:0 alpha:1];
+    }
 	return cell;
 }
 
@@ -109,7 +115,7 @@
 
 - (NSString *)displayNameForLocationID:(NSString *)locationID {
     if ([locationID isEqualToString:spaProximityID]) {
-        return @"Sense Spa";
+        return @"Senses Spa";
     } else if ([locationID isEqualToString:tennisProximityID]) {
         return @"Tennis Pro Shop";
     } else if ([locationID isEqualToString:diningProximityID]) {
