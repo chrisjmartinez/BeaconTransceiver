@@ -237,8 +237,8 @@ CLProximity     lastProximity;
     
     // only tell the server if something has changed, your battery thanks you
     if (proximity != lastProximity) {
+        lastProximity = proximity;
         [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
-        lastProximity = beacon.proximity;
     }
 }
 
