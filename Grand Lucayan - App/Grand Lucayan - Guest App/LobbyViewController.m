@@ -135,6 +135,10 @@ SystemSoundID	soundFileObject;
 }
 
 - (void)showAdvertisementForBeacon:(CLBeacon *)beacon region:(CLBeaconRegion *)region {
+    if (self.navigationController.topViewController != self) {
+        // Supress ad if lobby is not showing
+        return;
+    }
     if (self.advertisement && ![self.advertisement.region.identifier isEqualToString:region.identifier]) {
         // If ad is already showing for a different beacon, do nothing
         return;
