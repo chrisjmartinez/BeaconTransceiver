@@ -18,7 +18,9 @@
 @interface LobbyViewController () <BaseWebserviceDelegate> {
 CFURLRef		soundFileURLRef;
 SystemSoundID	soundFileObject;
-CLProximity     lastProximity;
+CLProximity     lastDiningProximity;
+CLProximity     lastSpaProximity;
+CLProximity     lastTennisProximity;
 }
 @property   (strong, nonatomic)     CLBeaconRegion      *diningBeaconRegion;
 @property   (strong, nonatomic)     CLBeaconRegion      *spaBeaconRegion;
@@ -52,7 +54,16 @@ CLProximity     lastProximity;
     // Create a system sound object representing the sound file.
     AudioServicesCreateSystemSoundID (soundFileURLRef, &soundFileObject);
     
-    lastProximity = -1;
+    lastDiningProximity = CLProximityUnknown;
+    lastSpaProximity = CLProximityUnknown;
+    lastTennisProximity = CLProximityUnknown;
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
+    
+    [self.guestWS putGuests:locationId location:diningProximityID proximity:[NSString stringWithFormat:@"%d", lastDiningProximity]];
+    [self.guestWS putGuests:locationId location:spaProximityID proximity:[NSString stringWithFormat:@"%d", lastSpaProximity]];
+    [self.guestWS putGuests:locationId location:tennisProximityID proximity:[NSString stringWithFormat:@"%d", lastTennisProximity]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -236,9 +247,23 @@ CLProximity     lastProximity;
 	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
     
     // only tell the server if something has changed, your battery thanks you
-    if (proximity != lastProximity) {
-        lastProximity = proximity;
-        [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+    if (beacon) {
+        if ([[beacon.proximityUUID UUIDString] isEqualToString:diningUUID]) {
+            if (proximity != lastDiningProximity) {
+                lastDiningProximity = proximity;
+                [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+            }
+        } else if ([[beacon.proximityUUID UUIDString] isEqualToString:spaUUID]) {
+            if (proximity != lastSpaProximity) {
+                lastSpaProximity = proximity;
+                [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+            }
+        } else if ([[beacon.proximityUUID UUIDString] isEqualToString:tennisUUID]) {
+            if (proximity != lastTennisProximity) {
+                lastTennisProximity = proximity;
+                [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+            }
+        }
     }
 }
 
