@@ -18,6 +18,7 @@
 @interface LobbyViewController () <BaseWebserviceDelegate> {
 CFURLRef		soundFileURLRef;
 SystemSoundID	soundFileObject;
+CLProximity     lastProximity;
 }
 @property   (strong, nonatomic)     CLBeaconRegion      *diningBeaconRegion;
 @property   (strong, nonatomic)     CLBeaconRegion      *spaBeaconRegion;
@@ -50,6 +51,8 @@ SystemSoundID	soundFileObject;
     soundFileURLRef = (__bridge CFURLRef)([[NSBundle mainBundle] URLForResource: @"Alert" withExtension: @"m4a"]);
     // Create a system sound object representing the sound file.
     AudioServicesCreateSystemSoundID (soundFileURLRef, &soundFileObject);
+    
+    lastProximity = -1;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -201,21 +204,42 @@ SystemSoundID	soundFileObject;
 
 - (void)setProximityOnButton:(CLBeacon *)beacon andLabel:(UIImageView *)label identifier:(NSString *)identifier {
     UIImage *image = [UIImage imageNamed:@"ProximityIndicatorNotNear"];
-    if (!beacon || beacon.proximity == CLProximityUnknown) {
-        image = [UIImage imageNamed:@"ProximityIndicatorNotNear"];
-    } else if (beacon.proximity == CLProximityImmediate) {
-        image = [UIImage imageNamed:@"ProximityIndicatorVeryNear"];
-    } else if (beacon.proximity == CLProximityNear) {
-        image = [UIImage imageNamed:@"ProximityIndicatorNear"];
-    } else if (beacon.proximity == CLProximityFar) {
-        image = [UIImage imageNamed:@"ProximityIndicatorFar"];
+    CLProximity proximity = CLProximityUnknown;
+    
+    if (beacon) {
+        proximity = beacon.proximity;
     }
+
+    switch (proximity) {
+        case CLProximityUnknown:
+        default:
+            image = [UIImage imageNamed:@"ProximityIndicatorNotNear"];
+            break;
+            
+        case CLProximityImmediate:
+            image = [UIImage imageNamed:@"ProximityIndicatorVeryNear"];
+            break;
+            
+        case CLProximityNear:
+            image = [UIImage imageNamed:@"ProximityIndicatorNear"];
+            break;
+            
+        case CLProximityFar:
+            image = [UIImage imageNamed:@"ProximityIndicatorFar"];
+            break;
+    }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         label.image = image;
     });
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
-    [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", beacon.proximity]];
+    
+    // only tell the server if something has changed, your battery thanks you
+    if (proximity != lastProximity) {
+        [self.guestWS putGuests:locationId location:identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
+        lastProximity = beacon.proximity;
+    }
 }
 
 - (void)flashImage:(UIImageView *)imageView {
