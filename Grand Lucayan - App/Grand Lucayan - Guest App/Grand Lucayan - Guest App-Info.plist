@@ -24,10 +24,6 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Hannotate.ttc</string>
-	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -32,8 +32,6 @@
 		BF58033D18513A49007842A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF58031F18513A49007842A0 /* UIKit.framework */; };
 		BF58034518513A49007842A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF58034318513A49007842A0 /* InfoPlist.strings */; };
 		BF58034718513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF58034618513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m */; };
-		BFAB84F71858CD9800E0DC6F /* Hannotate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = BFAB84F61858CD9800E0DC6F /* Hannotate.ttc */; };
-		BFAB84F81858CD9800E0DC6F /* Hannotate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = BFAB84F61858CD9800E0DC6F /* Hannotate.ttc */; };
 		BFB89D0318524D380084BEDD /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0218524D380084BEDD /* SplashViewController.m */; };
 		BFB89D0418524D380084BEDD /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0218524D380084BEDD /* SplashViewController.m */; };
 		BFB89D0718524DFF0084BEDD /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB89D0618524DFF0084BEDD /* SignInViewController.m */; };
@@ -99,7 +97,6 @@
 		BF58034218513A49007842A0 /* Grand Lucayan - Guest AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Grand Lucayan - Guest AppTests-Info.plist"; sourceTree = "<group>"; };
 		BF58034418513A49007842A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF58034618513A49007842A0 /* Grand_Lucayan___Guest_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Grand_Lucayan___Guest_AppTests.m"; sourceTree = "<group>"; };
-		BFAB84F61858CD9800E0DC6F /* Hannotate.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hannotate.ttc; sourceTree = "<group>"; };
 		BFB89D0118524D380084BEDD /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		BFB89D0218524D380084BEDD /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		BFB89D0518524DFF0084BEDD /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
@@ -217,7 +214,6 @@
 		BF58032218513A49007842A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BFAB84F61858CD9800E0DC6F /* Hannotate.ttc */,
 				BFEE6DF018574E4B001377B2 /* Alert.m4a */,
 				BF58032318513A49007842A0 /* Grand Lucayan - Guest App-Info.plist */,
 				BF58032418513A49007842A0 /* InfoPlist.strings */,
@@ -330,7 +326,6 @@
 			files = (
 				BFEE6DF118574E4B001377B2 /* Alert.m4a in Resources */,
 				BFEE6DE41856028C001377B2 /* Settings.bundle in Resources */,
-				BFAB84F71858CD9800E0DC6F /* Hannotate.ttc in Resources */,
 				BF58033418513A49007842A0 /* Images.xcassets in Resources */,
 				BF58032618513A49007842A0 /* InfoPlist.strings in Resources */,
 				BF58032F18513A49007842A0 /* Main.storyboard in Resources */,
@@ -341,7 +336,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFAB84F81858CD9800E0DC6F /* Hannotate.ttc in Resources */,
 				BFEE6DF218574E4B001377B2 /* Alert.m4a in Resources */,
 				BFEE6DE51856028C001377B2 /* Settings.bundle in Resources */,
 				BF58034518513A49007842A0 /* InfoPlist.strings in Resources */,
