@@ -24,6 +24,6 @@ typedef enum {
 - (void)getGuestsForAllLocations;
 - (void)postGuest:(NSString *)guestID guest:(Guest *)guest;
 - (void)putGuests:(NSString *)guestID location:(NSString *)locationID proximity:(NSString *)proximityID;
-- (void)putGuest:(NSString *)guestID uuid:(NSUUID *)uuid major:(CLBeaconMajorValue)major minor:(CLBeaconMinorValue)minor proximity:(CLProximity)proximity;
+- (void)putGuest:(NSString *)guestID location:(NSString *)locationID uuid:(NSUUID *)uuid major:(CLBeaconMajorValue)major minor:(CLBeaconMinorValue)minor proximity:(CLProximity)proximity;
 
 @end

@@ -108,7 +108,7 @@
     [self PUT:nil];
 }
 
-- (void)putGuest:(NSString *)guestID uuid:(NSUUID *)uuid major:(CLBeaconMajorValue)major minor:(CLBeaconMinorValue)minor proximity:(CLProximity)proximity {
+- (void)putGuest:(NSString *)guestID location:(NSString *)locationID uuid:(NSUUID *)uuid major:(CLBeaconMajorValue)major minor:(CLBeaconMinorValue)minor proximity:(CLProximity)proximity {
     NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
     
     // /guest/:guest_id/location/:location_id/proximity/:proximity

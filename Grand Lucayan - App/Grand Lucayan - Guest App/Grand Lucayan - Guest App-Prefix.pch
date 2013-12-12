@@ -14,3 +14,17 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#ifndef SINGLETON_GCD
+#define SINGLETON_GCD(classname)                            \
+\
++ (classname *)shared##classname {                          \
+\
+static dispatch_once_t pred;                                \
+static classname * shared##classname = nil;                 \
+dispatch_once( &pred, ^{                                    \
+shared##classname = [[self alloc] init];                    \
+});                                                         \
+return shared##classname;                                   \
+}
+#endif
