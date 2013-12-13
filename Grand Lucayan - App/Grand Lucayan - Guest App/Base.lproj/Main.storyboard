@@ -75,7 +75,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="My Party" backgroundImage="MenuButton">
+                                <state key="normal" title="My Group" backgroundImage="MenuButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="619" y="102"/>
         </scene>
-        <!--My Party View Controller - My Party-->
+        <!--My Party View Controller - My Group-->
         <scene sceneID="J20-5A-x1F">
             <objects>
                 <viewController id="dOT-kp-NCV" customClass="MyPartyViewController" sceneMemberID="viewController">
@@ -215,7 +215,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Party" id="iyK-2d-D3c"/>
+                    <navigationItem key="navigationItem" title="My Group" id="iyK-2d-D3c"/>
                     <connections>
                         <outlet property="table" destination="tX7-xE-fe5" id="xyi-pz-xlj"/>
                     </connections>
