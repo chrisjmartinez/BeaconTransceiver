@@ -63,7 +63,7 @@
     for (Guest *guest in self.guests) {
         if ([collection objectForKey:guest.ID]) {
             Guest *existing = [collection objectForKey:guest.ID];
-            if (guest.proximity > existing.proximity) {
+            if (guest.proximity < existing.proximity && guest.proximity != CLProximityUnknown) {
                 [collection setObject:guest forKey:guest.ID];
             }
         } else {
@@ -74,9 +74,7 @@
     }
     NSMutableArray *filtered = [NSMutableArray array];
     for (Guest * guest in [collection allValues]) {
-        //if (guest.proximity != CLProximityUnknown) {
-            [filtered addObject:guest];
-        //}
+        [filtered addObject:guest];
     }
     self.guests = filtered;
 }
@@ -120,6 +118,10 @@
         return @"Tennis Pro Shop";
     } else if ([locationID isEqualToString:diningProximityID]) {
         return @"Churchill's";
+    } else if ([locationID isEqualToString:casinoProximityID]) {
+        return @"Casino";
+    } else if ([locationID isEqualToString:golfProximityID]) {
+        return @"Golf Course";
     }
     return locationID;
 }

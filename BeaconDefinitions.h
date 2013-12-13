@@ -42,6 +42,9 @@ static NSString * proximityUUID = @"1AB2CA55-CADE-40F4-83B2-A1FE8C9FDEBE";
 static NSString * diningProximityID = @"com.stokedsoftware.diningRegion";
 static NSString * spaProximityID = @"com.stokedsoftware.spaRegion";
 static NSString * tennisProximityID = @"com.stokedsoftware.tennisRegion";
+static NSString * casinoProximityID = @"com.stokedsoftware.casinoRegion";
+static NSString * golfProximityID = @"com.stokedsoftware.golfRegion";
+
 static CLBeaconMajorValue grandLucayaResort = 1;
 static CLBeaconMinorValue diningBeacon = 1;
 static CLBeaconMinorValue spaBeacon = 2;

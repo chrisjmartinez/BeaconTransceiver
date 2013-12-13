@@ -150,8 +150,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="hVe-we-WUJ"/>
                     <connections>
+                        <outlet property="casinoLabel" destination="zlN-0s-RBF" id="Z5f-u3-eMa"/>
                         <outlet property="diningLabel" destination="QbG-8s-2ba" id="zJN-OX-XNx"/>
                         <outlet property="forecast" destination="wHO-XF-Cew" id="0JW-ki-SbD"/>
+                        <outlet property="golfLabel" destination="adp-p3-FuF" id="GLa-qj-qOG"/>
                         <outlet property="spaLabel" destination="bTr-kx-GsB" id="Oyu-ku-do8"/>
                         <outlet property="tennisLabel" destination="HqN-Jy-yyr" id="Jjz-7g-9bZ"/>
                         <outlet property="weather" destination="mPa-BW-6lf" id="ReP-Pu-H5e"/>
