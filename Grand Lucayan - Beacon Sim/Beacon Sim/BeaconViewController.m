@@ -47,11 +47,6 @@
 
 #pragma mark - Private methods
 - (void)initBeacon {
-    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:proximityUUID];
-    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                                major:grandLucayaResort
-                                                                minor:diningBeacon
-                                                           identifier:diningProximityID];
 }
 
 #pragma mark - CBPeripheralManagerDelegate
