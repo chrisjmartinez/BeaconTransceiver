@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "BeaconViewController.h"
 
-@interface DiningBeaconViewController : UIViewController <CBPeripheralManagerDelegate>
-
-@property (strong, nonatomic) CLBeaconRegion *beaconRegion;
-@property (strong, nonatomic) NSDictionary *beaconPeripheralData;
-@property (strong, nonatomic) CBPeripheralManager *peripheralManager;
+@interface DiningBeaconViewController : BeaconViewController
 
 @end

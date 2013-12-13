@@ -27,6 +27,12 @@
 		BF5803811852159E007842A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5803601852159D007842A0 /* UIKit.framework */; };
 		BF5803891852159E007842A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF5803871852159E007842A0 /* InfoPlist.strings */; };
 		BF58038B1852159E007842A0 /* Beacon_SimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF58038A1852159E007842A0 /* Beacon_SimTests.m */; };
+		BF72AB3D185B85B50089A5AA /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72AB3C185B85B50089A5AA /* BeaconViewController.m */; };
+		BF72AB3E185B85B50089A5AA /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72AB3C185B85B50089A5AA /* BeaconViewController.m */; };
+		BF72AB41185B89DC0089A5AA /* CasinoBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72AB40185B89DC0089A5AA /* CasinoBeaconViewController.m */; };
+		BF72AB42185B89DC0089A5AA /* CasinoBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72AB40185B89DC0089A5AA /* CasinoBeaconViewController.m */; };
+		BF72AB45185B89F00089A5AA /* GolfBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72AB44185B89F00089A5AA /* GolfBeaconViewController.m */; };
+		BF72AB46185B89F00089A5AA /* GolfBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72AB44185B89F00089A5AA /* GolfBeaconViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		BF5803861852159E007842A0 /* Beacon SimTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beacon SimTests-Info.plist"; sourceTree = "<group>"; };
 		BF5803881852159E007842A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF58038A1852159E007842A0 /* Beacon_SimTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Beacon_SimTests.m; sourceTree = "<group>"; };
+		BF72AB3B185B85B50089A5AA /* BeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconViewController.h; sourceTree = "<group>"; };
+		BF72AB3C185B85B50089A5AA /* BeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconViewController.m; sourceTree = "<group>"; };
+		BF72AB3F185B89DC0089A5AA /* CasinoBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasinoBeaconViewController.h; sourceTree = "<group>"; };
+		BF72AB40185B89DC0089A5AA /* CasinoBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasinoBeaconViewController.m; sourceTree = "<group>"; };
+		BF72AB43185B89F00089A5AA /* GolfBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GolfBeaconViewController.h; sourceTree = "<group>"; };
+		BF72AB44185B89F00089A5AA /* GolfBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GolfBeaconViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +147,14 @@
 			children = (
 				BF58036B1852159D007842A0 /* AppDelegate.h */,
 				BF58036C1852159D007842A0 /* AppDelegate.m */,
+				BF72AB3B185B85B50089A5AA /* BeaconViewController.h */,
+				BF72AB3C185B85B50089A5AA /* BeaconViewController.m */,
+				BF72AB3F185B89DC0089A5AA /* CasinoBeaconViewController.h */,
+				BF72AB40185B89DC0089A5AA /* CasinoBeaconViewController.m */,
 				A69529BF18525EB600E9ED2B /* DiningBeaconViewController.h */,
 				A69529C018525EB600E9ED2B /* DiningBeaconViewController.m */,
+				BF72AB43185B89F00089A5AA /* GolfBeaconViewController.h */,
+				BF72AB44185B89F00089A5AA /* GolfBeaconViewController.m */,
 				BF58036E1852159D007842A0 /* Main_iPhone.storyboard */,
 				BF5803711852159D007842A0 /* Main_iPad.storyboard */,
 				A69529BC18525EA500E9ED2B /* SpaBeaconViewController.h */,
@@ -228,7 +246,7 @@
 				ORGANIZATIONNAME = "Grand Lucayan";
 				TargetAttributes = {
 					BF5803581852159D007842A0 = {
-						DevelopmentTeam = ZW82ETTB3F;
+						DevelopmentTeam = HD6AC27BK2;
 					};
 					BF58037C1852159E007842A0 = {
 						TestTargetID = BF5803581852159D007842A0;
@@ -283,9 +301,12 @@
 			files = (
 				BF5803761852159D007842A0 /* ViewController.m in Sources */,
 				A69529C418525EC600E9ED2B /* TennisBeaconViewController.m in Sources */,
+				BF72AB45185B89F00089A5AA /* GolfBeaconViewController.m in Sources */,
 				A69529C118525EB600E9ED2B /* DiningBeaconViewController.m in Sources */,
+				BF72AB41185B89DC0089A5AA /* CasinoBeaconViewController.m in Sources */,
 				BF58036D1852159D007842A0 /* AppDelegate.m in Sources */,
 				BF5803691852159D007842A0 /* main.m in Sources */,
+				BF72AB3D185B85B50089A5AA /* BeaconViewController.m in Sources */,
 				A69529BE18525EA500E9ED2B /* SpaBeaconViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF72AB46185B89F00089A5AA /* GolfBeaconViewController.m in Sources */,
+				BF72AB42185B89DC0089A5AA /* CasinoBeaconViewController.m in Sources */,
+				BF72AB3E185B85B50089A5AA /* BeaconViewController.m in Sources */,
 				BF58038B1852159E007842A0 /* Beacon_SimTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
