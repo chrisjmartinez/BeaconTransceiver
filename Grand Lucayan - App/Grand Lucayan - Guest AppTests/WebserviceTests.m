@@ -87,6 +87,18 @@
     [self waitForBlockToComplete];
 }
 
+- (void)testGetGuestsForLocation
+{
+    LocationWebservice * webservice = [LocationWebservice new];
+    webservice.delegate = self;
+    
+    [self startBlockWait];
+    
+    [webservice getGuestsForLocation:@"com.stokedsoftware.spaRegion"];
+    
+    [self waitForBlockToComplete];
+}
+
 - (void)testPostGuest
 {
     GuestWebservice * webservice = [GuestWebservice new];
