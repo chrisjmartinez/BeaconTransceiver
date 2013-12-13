@@ -100,20 +100,20 @@ CLProximity     lastSpaProximity;
     [self.locationManager startMonitoringForRegion:self.tennisBeaconRegion];
     // Casino
     NSUUID *uuidEstimote = [[NSUUID alloc] initWithUUIDString:ESTIMOTE_UUID];
-    //self.casinoBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:PURPLE_1_MAJOR minor:PURPLE_1_MINOR identifier:casinoProximityID];
-    //self.casinoBeaconRegion.notifyEntryStateOnDisplay = YES;
-    //[self.locationManager startMonitoringForRegion:self.casinoBeaconRegion];
-    self.casinoBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidEstimote major:PURPLE_2_MAJOR minor:PURPLE_2_MINOR identifier:casinoProximityID];
+    self.casinoBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:PURPLE_1_MAJOR minor:PURPLE_1_MINOR identifier:casinoProximityID];
     self.casinoBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.casinoBeaconRegion];
+    //self.casinoBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidEstimote major:PURPLE_2_MAJOR minor:PURPLE_2_MINOR identifier:casinoProximityID];
+    //self.casinoBeaconRegion.notifyEntryStateOnDisplay = YES;
+    //[self.locationManager startMonitoringForRegion:self.casinoBeaconRegion];
     
     // Golf
-    //self.golfBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidEstimote major:GREEN_1_MAJOR minor:GREEN_1_MINOR identifier:golfProximityID];
-    //self.golfBeaconRegion.notifyEntryStateOnDisplay = YES;
-    //[self.locationManager startMonitoringForRegion:self.golfBeaconRegion];
-    self.golfBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidEstimote major:GREEN_2_MAJOR minor:GREEN_2_MINOR identifier:golfProximityID];
+    self.golfBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidEstimote major:GREEN_1_MAJOR minor:GREEN_1_MINOR identifier:golfProximityID];
     self.golfBeaconRegion.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:self.golfBeaconRegion];
+    //self.golfBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuidEstimote major:GREEN_2_MAJOR minor:GREEN_2_MINOR identifier:golfProximityID];
+    //self.golfBeaconRegion.notifyEntryStateOnDisplay = YES;
+    //[self.locationManager startMonitoringForRegion:self.golfBeaconRegion];
 }
 
 #pragma mark - LocationManagerDelegate
@@ -273,13 +273,13 @@ CLProximity     lastSpaProximity;
 	NSString *locationId = [prefs stringForKey:@"identifier_preference"];
     
     // only tell the server if something has changed, your battery thanks you
-    if (beacon && [beacon.major intValue] == PURPLE_2_MAJOR) {
+    if (beacon && [beacon.major intValue] == PURPLE_1_MAJOR) {
         if (proximity != lastCasinoProximity) {
             lastCasinoProximity = proximity;
             [self.guestWS putGuests:locationId location:region.identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
         }
     }
-    if (beacon && [beacon.major intValue] == GREEN_2_MAJOR) {
+    if (beacon && [beacon.major intValue] == GREEN_1_MAJOR) {
         if (proximity != lastGolfProximity) {
             lastGolfProximity = proximity;
             [self.guestWS putGuests:locationId location:region.identifier proximity:[NSString stringWithFormat:@"%d", proximity]];
