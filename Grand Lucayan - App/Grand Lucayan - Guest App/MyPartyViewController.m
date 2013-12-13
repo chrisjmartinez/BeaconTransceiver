@@ -46,7 +46,7 @@
     if (self.isShowing) {
         if (service.dictionary) {
             self.guests = [Guest guestsFromJSON:service.dictionary];
-            [self filterGuests];
+            //[self filterGuests];
             // Update the display with new data
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.table reloadData];
