@@ -35,6 +35,7 @@ CLProximity     lastSpaProximity;
 @property   (weak, nonatomic)       IBOutlet    UILabel         *forecast;
 @property   (nonatomic, retain)     GuestWebservice     *guestWS;
 @property   (nonatomic, retain)     PopupAdvertisementViewController    *advertisement;
+@property   (nonatomic, retain)     CLBeaconRegion      *adDismissedRegion;
 @end
 
 @implementation LobbyViewController
@@ -187,6 +188,10 @@ CLProximity     lastSpaProximity;
         // If ad is already showing for a different beacon, do nothing
         return;
     }
+    if ([self.adDismissedRegion.identifier isEqualToString:region.identifier] ) {
+        // If an ad was dismissed for this region, don't popup another one until after I've been into a diff region
+        return;
+    }
     if (!self.advertisement && (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate)) {
         if ([region.identifier isEqualToString:casinoProximityID] || [region.identifier isEqualToString:golfProximityID]) {
             return;
@@ -236,7 +241,8 @@ CLProximity     lastSpaProximity;
 }
 
 - (void)advertisement:(PopupAdvertisementViewController *)ad wasTouched:(UITouch *)touch {
-    //    [self closeAdvertisement];
+    [self closeAdvertisement];
+    self.adDismissedRegion = [ad.region copy];
 }
 
 - (void)setProximityOnButton:(CLBeacon *)beacon andLabel:(UIImageView *)label identifier:(CLBeaconRegion *)region {
