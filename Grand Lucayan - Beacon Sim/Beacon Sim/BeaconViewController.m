@@ -52,7 +52,15 @@
 }
 
 - (void)displayGuests:(NSString *)locationID {
-    self.guests = [[GuestsViewController alloc] init];
+    NSString * storyBoard;
+    
+    if (UIUserInterfaceIdiomPhone == [[UIDevice currentDevice] userInterfaceIdiom]) {
+        storyBoard = @"Main_iPhone";
+    } else {
+        storyBoard = @"Main_iPad";
+    }
+    
+    self.guests = [[UIStoryboard storyboardWithName:storyBoard bundle: nil] instantiateViewControllerWithIdentifier:@"GuestsAtLocation"];
     
     self.guests.locationID = locationID;
     [self.navigationController pushViewController:self.guests animated:YES];

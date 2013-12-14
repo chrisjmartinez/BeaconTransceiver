@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="2606" y="1326"/>
         </scene>
-        <!--Guests View Controller-->
+        <!--Guests View Controller - Guests at Location-->
         <scene sceneID="Shs-0O-HIQ">
             <objects>
-                <viewController id="0Xx-Vq-zci" customClass="GuestsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuestsAtLocation" title="Guests at Location" id="0Xx-Vq-zci" customClass="GuestsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BME-gJ-v6H"/>
                         <viewControllerLayoutGuide type="bottom" id="rFE-TG-NAO"/>
@@ -180,15 +180,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp5-Bb-c3Y">
-                                                    <rect key="frame" x="83" y="30" width="26" height="25"/>
+                                                    <rect key="frame" x="83" y="30" width="211" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Near the Senses Spa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD8-g6-gra">
-                                                    <rect key="frame" x="314" y="32" width="141" height="21"/>
+                                                    <rect key="frame" x="314" y="26" width="341" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -205,15 +205,15 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="0Xx-Vq-zci" id="ZTZ-q2-9oV"/>
-                                    <outlet property="delegate" destination="0Xx-Vq-zci" id="SlX-6x-g8C"/>
+                                    <outlet property="dataSource" destination="0Xx-Vq-zci" id="qv7-b9-xWz"/>
+                                    <outlet property="delegate" destination="0Xx-Vq-zci" id="ozI-I2-xnT"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="table" destination="Ig4-vB-bnD" id="TPM-ke-UR9"/>
+                        <outlet property="table" destination="Ig4-vB-bnD" id="UzZ-Cb-U1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhg-78-W4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
