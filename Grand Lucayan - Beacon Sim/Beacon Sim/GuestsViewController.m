@@ -58,10 +58,11 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.table reloadData];
             });
-            // Fire another request after a five second pause
-            [NSThread sleepForTimeInterval:5];
-            [self.locationWS getGuestsForLocation:self.locationID];
         }
+        
+        // Fire another request after a five second pause
+        [NSThread sleepForTimeInterval:5];
+        [self.locationWS getGuestsForLocation:self.locationID];
     }
 }
 
