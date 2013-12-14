@@ -98,12 +98,12 @@
             
         case CLProximityFar:
             location.text = @"Far";
-            location.textColor = [UIColor orangeColor];
+            location.textColor = [UIColor blueColor];
             break;
             
         case CLProximityNear:
             location.text = @"Near";
-            location.textColor = [UIColor yellowColor];
+            location.textColor = [UIColor orangeColor];
             break;
             
         case CLProximityImmediate:
