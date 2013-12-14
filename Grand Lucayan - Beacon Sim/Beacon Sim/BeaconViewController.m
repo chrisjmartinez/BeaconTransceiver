@@ -23,6 +23,14 @@
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
+- (void)viewDidUnload {
+#if TARGET_IPHONE_SIMULATOR
+#else
+    [self.peripheralManager stopAdvertising];
+#endif
+    self.isTransmitting = NO;
+}
+
 - (void)viewDidAppear:(BOOL)animated {
 #if TARGET_IPHONE_SIMULATOR
 #else
@@ -34,11 +42,13 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+/*
 #if TARGET_IPHONE_SIMULATOR
 #else
     [self.peripheralManager stopAdvertising];
 #endif
     self.isTransmitting = NO;
+*/
 }
 
 - (void)didReceiveMemoryWarning

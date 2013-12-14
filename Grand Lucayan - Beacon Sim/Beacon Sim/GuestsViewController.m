@@ -52,7 +52,7 @@
 - (void)serviceCallDidFinishLoading:(BaseWebservice *)service withResponse:(CoreNetworkCommunicationResponse *)response {
     if (self.isShowing) {
         if (200 == response.status && service.dictionary) {
-            self.guests = [Guest guestsFromJSON:service.dictionary];
+            self.guests = [self sortByProximity:[Guest guestsFromJSON:service.dictionary]];
 
             // Update the display with new data
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -129,6 +129,27 @@
         return @"Golf Course";
     }
     return locationID;
+}
+
+#pragma mark - Sorting
+
+- (NSArray*)sortByProximity:(NSArray*)unsortedArray{
+    NSArray *sortedByProximity = [unsortedArray sortedArrayUsingComparator:(NSComparator)^(id obj1, id obj2){
+        Guest * guest1 = (Guest *)obj1;
+        Guest * guest2 = (Guest *)obj2;
+        
+        if (!guest1 || !guest2) {
+            return NSOrderedSame;
+        }
+        
+        if (guest1.proximity < guest2.proximity) {
+            return NSOrderedAscending;
+        } else if (guest1.proximity > guest2.proximity) {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
+    return sortedByProximity;
 }
 
 @end
