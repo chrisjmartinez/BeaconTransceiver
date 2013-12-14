@@ -19,4 +19,8 @@
                                                            identifier:diningProximityID];
 }
 
+- (IBAction)tapDiningBeacon:(id)sender {
+    [self displayGuests:diningProximityID];
+}
+
 @end

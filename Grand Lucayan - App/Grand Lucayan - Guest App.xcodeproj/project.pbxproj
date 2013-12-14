@@ -298,7 +298,7 @@
 				ORGANIZATIONNAME = "Grand Lucayan";
 				TargetAttributes = {
 					BF58031718513A49007842A0 = {
-						DevelopmentTeam = HD6AC27BK2;
+						DevelopmentTeam = ZW82ETTB3F;
 					};
 					BF58033818513A49007842A0 = {
 						TestTargetID = BF58031718513A49007842A0;
@@ -515,8 +515,8 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
-					"$(SRCROOT)/../Shared//Factories",
-					"$(SRCROOT)/../Shared//Webservices",
+					"$(SRCROOT)/../Shared/Factories",
+					"$(SRCROOT)/../Shared/Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -551,8 +551,8 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
-					"$(SRCROOT)/../Shared//Factories",
-					"$(SRCROOT)/../Shared//Webservices",
+					"$(SRCROOT)/../Shared/Factories",
+					"$(SRCROOT)/../Shared/Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

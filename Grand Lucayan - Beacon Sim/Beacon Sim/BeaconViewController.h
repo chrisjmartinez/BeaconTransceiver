@@ -14,4 +14,7 @@
 @property (strong, nonatomic) CLBeaconRegion *beaconRegion;
 @property (strong, nonatomic) NSDictionary *beaconPeripheralData;
 @property (strong, nonatomic) CBPeripheralManager *peripheralManager;
+
+- (void)displayGuests:(NSString *)locationID;
+
 @end

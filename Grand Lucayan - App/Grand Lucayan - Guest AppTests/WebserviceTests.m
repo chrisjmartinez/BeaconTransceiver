@@ -12,6 +12,7 @@
 #import "GuestWebservice.h"
 #import "LocationWebservice.h"
 #import "CoreNetworkCommunicationResponse.h"
+#import "BeaconDefinitions.h"
 
 @interface WebserviceTests : XCAsynchronousTestCase <BaseWebserviceDelegate>
 @end
@@ -94,7 +95,7 @@
     
     [self startBlockWait];
     
-    [webservice getGuestsForLocation:@"com.stokedsoftware.spaRegion"];
+    [webservice getGuestsForLocation:diningProximityID];
     
     [self waitForBlockToComplete];
 }

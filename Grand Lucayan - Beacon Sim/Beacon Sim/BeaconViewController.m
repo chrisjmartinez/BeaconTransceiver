@@ -8,6 +8,7 @@
 
 #import "BeaconViewController.h"
 #import "BeaconDefinitions.h"
+#import "GuestsViewController.h"
 
 @interface BeaconViewController ()
 @property   (nonatomic, assign)  BOOL isTransmitting;
@@ -47,6 +48,13 @@
 
 #pragma mark - Private methods
 - (void)initBeacon {
+}
+
+- (void)displayGuests:(NSString *)locationID {
+    GuestsViewController * guests = [[GuestsViewController alloc] init];
+    
+    guests.locationID = locationID;
+    [self.navigationController pushViewController:guests animated:YES];
 }
 
 #pragma mark - CBPeripheralManagerDelegate

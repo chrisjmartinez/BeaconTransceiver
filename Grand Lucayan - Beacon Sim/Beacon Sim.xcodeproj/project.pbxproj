@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A68A360E185BECBD00A7419D /* GuestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A68A360D185BECBD00A7419D /* GuestsViewController.m */; };
+		A68A3613185BEEB000A7419D /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = A68A360F185BEEB000A7419D /* Guest.m */; };
+		A68A3614185BEEB000A7419D /* BaseWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A68A3610185BEEB000A7419D /* BaseWebservice.m */; };
+		A68A3615185BEEB000A7419D /* GuestWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A68A3611185BEEB000A7419D /* GuestWebservice.m */; };
+		A68A3616185BEEB000A7419D /* LocationWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A68A3612185BEEB000A7419D /* LocationWebservice.m */; };
 		A69529BE18525EA500E9ED2B /* SpaBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69529BD18525EA500E9ED2B /* SpaBeaconViewController.m */; };
 		A69529C118525EB600E9ED2B /* DiningBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69529C018525EB600E9ED2B /* DiningBeaconViewController.m */; };
 		A69529C418525EC600E9ED2B /* TennisBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69529C318525EC600E9ED2B /* TennisBeaconViewController.m */; };
@@ -46,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A68A360C185BECBD00A7419D /* GuestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestsViewController.h; sourceTree = "<group>"; };
+		A68A360D185BECBD00A7419D /* GuestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestsViewController.m; sourceTree = "<group>"; };
+		A68A360F185BEEB000A7419D /* Guest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Guest.m; path = ../Shared/Factories/Guest.m; sourceTree = "<group>"; };
+		A68A3610185BEEB000A7419D /* BaseWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BaseWebservice.m; path = ../Shared/Webservices/BaseWebservice.m; sourceTree = "<group>"; };
+		A68A3611185BEEB000A7419D /* GuestWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GuestWebservice.m; path = ../Shared/Webservices/GuestWebservice.m; sourceTree = "<group>"; };
+		A68A3612185BEEB000A7419D /* LocationWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LocationWebservice.m; path = ../Shared/Webservices/LocationWebservice.m; sourceTree = "<group>"; };
 		A69529BC18525EA500E9ED2B /* SpaBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaBeaconViewController.h; sourceTree = "<group>"; };
 		A69529BD18525EA500E9ED2B /* SpaBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaBeaconViewController.m; sourceTree = "<group>"; };
 		A69529BF18525EB600E9ED2B /* DiningBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiningBeaconViewController.h; sourceTree = "<group>"; };
@@ -112,6 +123,10 @@
 		BF5803501852159D007842A0 = {
 			isa = PBXGroup;
 			children = (
+				A68A360F185BEEB000A7419D /* Guest.m */,
+				A68A3610185BEEB000A7419D /* BaseWebservice.m */,
+				A68A3611185BEEB000A7419D /* GuestWebservice.m */,
+				A68A3612185BEEB000A7419D /* LocationWebservice.m */,
 				A69529CD1852618700E9ED2B /* BeaconDefinitions.h */,
 				BF5803621852159D007842A0 /* Beacon Sim */,
 				BF5803841852159E007842A0 /* Beacon SimTests */,
@@ -155,6 +170,8 @@
 				A69529C018525EB600E9ED2B /* DiningBeaconViewController.m */,
 				BF72AB43185B89F00089A5AA /* GolfBeaconViewController.h */,
 				BF72AB44185B89F00089A5AA /* GolfBeaconViewController.m */,
+				A68A360C185BECBD00A7419D /* GuestsViewController.h */,
+				A68A360D185BECBD00A7419D /* GuestsViewController.m */,
 				BF58036E1852159D007842A0 /* Main_iPhone.storyboard */,
 				BF5803711852159D007842A0 /* Main_iPad.storyboard */,
 				A69529BC18525EA500E9ED2B /* SpaBeaconViewController.h */,
@@ -299,11 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68A3613185BEEB000A7419D /* Guest.m in Sources */,
+				A68A3614185BEEB000A7419D /* BaseWebservice.m in Sources */,
+				A68A3615185BEEB000A7419D /* GuestWebservice.m in Sources */,
+				A68A3616185BEEB000A7419D /* LocationWebservice.m in Sources */,
 				BF5803761852159D007842A0 /* ViewController.m in Sources */,
 				A69529C418525EC600E9ED2B /* TennisBeaconViewController.m in Sources */,
 				BF72AB45185B89F00089A5AA /* GolfBeaconViewController.m in Sources */,
 				A69529C118525EB600E9ED2B /* DiningBeaconViewController.m in Sources */,
 				BF72AB41185B89DC0089A5AA /* CasinoBeaconViewController.m in Sources */,
+				A68A360E185BECBD00A7419D /* GuestsViewController.m in Sources */,
 				BF58036D1852159D007842A0 /* AppDelegate.m in Sources */,
 				BF5803691852159D007842A0 /* main.m in Sources */,
 				BF72AB3D185B85B50089A5AA /* BeaconViewController.m in Sources */,
@@ -451,7 +473,26 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beacon Sim/Beacon Sim-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared/Factories",
+					"$(SRCROOT)/../Shared/Webservices",
+				);
 				INFOPLIST_FILE = "Beacon Sim/Beacon Sim-Info.plist";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos7.0]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator7.0]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Debug-iphonesimulator",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lCoreNetworkCommunicationLibrary",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -467,7 +508,26 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beacon Sim/Beacon Sim-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
+					"$(SRCROOT)/../Shared/Factories",
+					"$(SRCROOT)/../Shared/Webservices",
+				);
 				INFOPLIST_FILE = "Beacon Sim/Beacon Sim-Info.plist";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos7.0]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Release-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator7.0]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/Release-iphonesimulator",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lCoreNetworkCommunicationLibrary",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
