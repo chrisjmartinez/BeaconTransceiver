@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
     
+    self.title = [NSString stringWithFormat:@"Guests at %@", [self displayNameForLocationID:self.locationID]];
     self.locationWS = [[LocationWebservice alloc] init];
     self.locationWS.delegate = self;
 }
@@ -87,12 +88,27 @@
     UILabel *name = (UILabel *)[cell viewWithTag:2];
     name.text = guest.ID;
     UILabel *location = (UILabel *)[cell viewWithTag:3];
-    if (guest.proximity == CLProximityUnknown) {
-        location.text = @"Location Unknown";
-        location.textColor = [UIColor redColor];
-    } else {
-        location.text = [NSString stringWithFormat:@"Nearest place: %@", [self displayNameForLocationID:guest.locationID]];
-        location.textColor = [UIColor colorWithRed:0 green:0.6 blue:0 alpha:1];
+    
+    switch (guest.proximity) {
+        case CLProximityUnknown:
+            location.text = @"Location Unknown";
+            location.textColor = [UIColor redColor];
+            break;
+            
+        case CLProximityFar:
+            location.text = @"Far";
+            location.textColor = [UIColor orangeColor];
+            break;
+            
+        case CLProximityNear:
+            location.text = @"Near";
+            location.textColor = [UIColor yellowColor];
+            break;
+            
+        case CLProximityImmediate:
+            location.text = @"Very Close";
+            location.textColor = [UIColor greenColor];
+            break;
     }
 	return cell;
 }

@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="1334" y="949"/>
         </scene>
-        <!--Guests View Controller-->
+        <!--Guests View Controller - Guests at Location-->
         <scene sceneID="cdm-GG-Or2">
             <objects>
-                <viewController id="p7G-Ba-L21" customClass="GuestsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuestsAtLocation" title="Guests at Location" id="p7G-Ba-L21" customClass="GuestsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PGd-QE-Tyw"/>
                         <viewControllerLayoutGuide type="bottom" id="dSZ-hp-jAF"/>
@@ -193,16 +193,15 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="p7G-Ba-L21" id="uE5-DS-XP9"/>
-                                    <outlet property="delegate" destination="p7G-Ba-L21" id="1q7-77-TgJ"/>
+                                    <outlet property="dataSource" destination="p7G-Ba-L21" id="0Js-sq-76i"/>
+                                    <outlet property="delegate" destination="p7G-Ba-L21" id="SiB-DD-7eP"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="njv-lX-6rk"/>
                     <connections>
-                        <outlet property="table" destination="VIM-BL-LZ8" id="kST-J8-Et1"/>
+                        <outlet property="table" destination="VIM-BL-LZ8" id="1Hd-Io-pl6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkU-1k-OYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
