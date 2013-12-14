@@ -23,4 +23,8 @@
                                                            identifier:golfProximityID];
 }
 
+- (IBAction)tapGolfBeacon:(id)sender {
+    [self displayGuests:golfProximityID];
+}
+
 @end

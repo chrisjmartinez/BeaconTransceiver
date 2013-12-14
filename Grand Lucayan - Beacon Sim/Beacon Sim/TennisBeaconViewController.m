@@ -17,4 +17,9 @@
                                                                 minor:tennisBeacon
                                                            identifier:tennisProximityID];
 }
+
+- (IBAction)tapTennisBeacon:(id)sender {
+    [self displayGuests:tennisProximityID];
+}
+
 @end

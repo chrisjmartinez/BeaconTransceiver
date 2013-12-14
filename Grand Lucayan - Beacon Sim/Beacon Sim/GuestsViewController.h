@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GuestsViewController : UITableViewController
+@interface GuestsViewController : UIViewController
 
 @property (strong, nonatomic) NSString * locationID;
 

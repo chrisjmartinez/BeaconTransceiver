@@ -22,4 +22,8 @@
                                                            identifier:casinoProximityID];
 }
 
+- (IBAction)tapCasinoBeacon:(id)sender {
+    [self displayGuests:casinoProximityID];
+}
+
 @end

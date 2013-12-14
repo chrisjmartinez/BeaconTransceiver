@@ -14,18 +14,10 @@
 @interface GuestsViewController () <BaseWebserviceDelegate>
 @property (nonatomic, retain) LocationWebservice *  locationWS;
 @property (nonatomic, retain) NSArray *             guests;
+@property (weak, nonatomic) IBOutlet UITableView *table;
 @end
 
 @implementation GuestsViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -61,7 +53,7 @@
 
         // Update the display with new data
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
+            [self.table reloadData];
         });
         // Fire another request after a one second pause
         [NSThread sleepForTimeInterval:2];

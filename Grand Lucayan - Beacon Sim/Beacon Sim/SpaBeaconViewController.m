@@ -20,4 +20,8 @@
                                                            identifier:spaProximityID];
 }
 
+- (IBAction)tapSpaBeacon:(id)sender {
+    [self displayGuests:spaProximityID];
+}
+
 @end
