@@ -26,6 +26,13 @@
 		A613341D183E492500A1F571 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613341C183E492500A1F571 /* TrackViewController.m */; };
 		A6133420183E4CA000A1F571 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613341F183E4CA000A1F571 /* CoreLocation.framework */; };
 		A6133422183E4CA600A1F571 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6133421183E4CA600A1F571 /* CoreBluetooth.framework */; };
+		A618791818AC01A4008AB879 /* Lake Worth.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A618791718AC01A4008AB879 /* Lake Worth.gpx */; };
+		A618791C18AC036F008AB879 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A618791918AC036F008AB879 /* LocationManager.m */; };
+		A618791D18AC036F008AB879 /* LocationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A618791A18AC036F008AB879 /* LocationManagerTests.m */; };
+		A618791E18AC036F008AB879 /* XCAsynchronousTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A618791B18AC036F008AB879 /* XCAsynchronousTestCase.m */; };
+		A618791F18AC0517008AB879 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A618791918AC036F008AB879 /* LocationManager.m */; };
+		A618792318AC20D2008AB879 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6133421183E4CA600A1F571 /* CoreBluetooth.framework */; };
+		A618792418AC20D2008AB879 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613341F183E4CA000A1F571 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,11 @@
 		A613341E183E4B5800A1F571 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		A613341F183E4CA000A1F571 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A6133421183E4CA600A1F571 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A618791718AC01A4008AB879 /* Lake Worth.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Lake Worth.gpx"; sourceTree = "<group>"; };
+		A618791918AC036F008AB879 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		A618791A18AC036F008AB879 /* LocationManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerTests.m; sourceTree = "<group>"; };
+		A618791B18AC036F008AB879 /* XCAsynchronousTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCAsynchronousTestCase.m; sourceTree = "<group>"; };
+		A618792018AC0560008AB879 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = BeaconTransceiverTests/LocationManager.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A618792318AC20D2008AB879 /* CoreBluetooth.framework in Frameworks */,
+				A618792418AC20D2008AB879 /* CoreLocation.framework in Frameworks */,
 				A6133403183E430200A1F571 /* XCTest.framework in Frameworks */,
 				A6133405183E430200A1F571 /* UIKit.framework in Frameworks */,
 				A6133404183E430200A1F571 /* Foundation.framework in Frameworks */,
@@ -129,6 +143,7 @@
 		A61333E6183E430100A1F571 /* BeaconTransceiver */ = {
 			isa = PBXGroup;
 			children = (
+				A618792018AC0560008AB879 /* LocationManager.h */,
 				A61333EF183E430100A1F571 /* AppDelegate.h */,
 				A61333F0183E430100A1F571 /* AppDelegate.m */,
 				A61333F2183E430100A1F571 /* Main_iPhone.storyboard */,
@@ -160,6 +175,9 @@
 		A6133408183E430200A1F571 /* BeaconTransceiverTests */ = {
 			isa = PBXGroup;
 			children = (
+				A618791918AC036F008AB879 /* LocationManager.m */,
+				A618791A18AC036F008AB879 /* LocationManagerTests.m */,
+				A618791B18AC036F008AB879 /* XCAsynchronousTestCase.m */,
 				A613340E183E430200A1F571 /* BeaconTransceiverTests.m */,
 				A6133409183E430200A1F571 /* Supporting Files */,
 			);
@@ -171,6 +189,7 @@
 			children = (
 				A613340A183E430200A1F571 /* BeaconTransceiverTests-Info.plist */,
 				A613340B183E430200A1F571 /* InfoPlist.strings */,
+				A618791718AC01A4008AB879 /* Lake Worth.gpx */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A618791818AC01A4008AB879 /* Lake Worth.gpx in Resources */,
 				A613340D183E430200A1F571 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A618791F18AC0517008AB879 /* LocationManager.m in Sources */,
 				A613341D183E492500A1F571 /* TrackViewController.m in Sources */,
 				A613341A183E48ED00A1F571 /* TransmitViewController.m in Sources */,
 				A61333FA183E430100A1F571 /* ViewController.m in Sources */,
@@ -288,7 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A618791C18AC036F008AB879 /* LocationManager.m in Sources */,
 				A613340F183E430200A1F571 /* BeaconTransceiverTests.m in Sources */,
+				A618791E18AC036F008AB879 /* XCAsynchronousTestCase.m in Sources */,
+				A618791D18AC036F008AB879 /* LocationManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
