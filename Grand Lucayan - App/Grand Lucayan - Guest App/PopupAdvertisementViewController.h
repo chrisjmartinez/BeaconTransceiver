@@ -13,4 +13,7 @@
 @property   (nonatomic, retain)     IBOutlet    UIImageView *photo;
 @property   (nonatomic, retain)     IBOutlet    UILabel     *titleLabel, *message;
 @property   (nonatomic, retain)     CLBeaconRegion          *region;
+@property   (nonatomic, retain)     id                      delegate;
+
+- (void)advertisement:(PopupAdvertisementViewController *)ad wasTouched:(UITouch *)touch;
 @end

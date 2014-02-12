@@ -42,5 +42,9 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>WebserverBaseURL</key>
+	<string>http://getjulie.com</string>
+	<key>WebserverPort</key>
+	<integer>3000</integer>
 </dict>
 </plist>

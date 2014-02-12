@@ -15,6 +15,7 @@
 		A67B6DAC1854EC2400239902 /* LocationWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A67B6DAA1854EC2400239902 /* LocationWebservice.m */; };
 		A69529CC1852601100E9ED2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69529CA1852601100E9ED2B /* CoreLocation.framework */; };
 		A6A858201857C438006E4E97 /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = A66FBD571857BD96008FC8BA /* Guest.m */; };
+		A6B119EC1859F4A900C95324 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B119EB1859F4A900C95324 /* BeaconManager.m */; };
 		A6F6FE141854C89E0055DBEC /* BaseWebservice.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6FE131854C89E0055DBEC /* BaseWebservice.m */; };
 		BF08366518523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
 		BF08366618523A39000114FD /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF08366418523A39000114FD /* LobbyViewController.m */; };
@@ -74,6 +75,8 @@
 		A67B6DAA1854EC2400239902 /* LocationWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LocationWebservice.m; path = ../Shared/Webservices/LocationWebservice.m; sourceTree = "<group>"; };
 		A69529C91852601100E9ED2B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A69529CA1852601100E9ED2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A6B119EA1859F4A900C95324 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconManager.h; sourceTree = "<group>"; };
+		A6B119EB1859F4A900C95324 /* BeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconManager.m; sourceTree = "<group>"; };
 		A6F6FE10185284490055DBEC /* BeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconDefinitions.h; path = ../BeaconDefinitions.h; sourceTree = "<group>"; };
 		A6F6FE131854C89E0055DBEC /* BaseWebservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BaseWebservice.m; path = ../Shared/Webservices/BaseWebservice.m; sourceTree = "<group>"; };
 		BF08366318523A39000114FD /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyViewController.h; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 				BFEE6DE718562F96001377B2 /* WeatherViewController.m */,
 				BF58033318513A49007842A0 /* Images.xcassets */,
 				BF58032218513A49007842A0 /* Supporting Files */,
+				A6B119EA1859F4A900C95324 /* BeaconManager.h */,
+				A6B119EB1859F4A900C95324 /* BeaconManager.m */,
 			);
 			path = "Grand Lucayan - Guest App";
 			sourceTree = "<group>";
@@ -293,7 +298,7 @@
 				ORGANIZATIONNAME = "Grand Lucayan";
 				TargetAttributes = {
 					BF58031718513A49007842A0 = {
-						DevelopmentTeam = HD6AC27BK2;
+						DevelopmentTeam = ZW82ETTB3F;
 					};
 					BF58033818513A49007842A0 = {
 						TestTargetID = BF58031718513A49007842A0;
@@ -362,6 +367,7 @@
 				BF58032818513A49007842A0 /* main.m in Sources */,
 				BFB89D0718524DFF0084BEDD /* SignInViewController.m in Sources */,
 				BFEE6DE818562F96001377B2 /* WeatherViewController.m in Sources */,
+				A6B119EC1859F4A900C95324 /* BeaconManager.m in Sources */,
 				BF08366518523A39000114FD /* LobbyViewController.m in Sources */,
 				BFB89D0F18524E570084BEDD /* ActivityViewController.m in Sources */,
 			);
@@ -509,8 +515,8 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
-					"$(SRCROOT)/../Shared//Factories",
-					"$(SRCROOT)/../Shared//Webservices",
+					"$(SRCROOT)/../Shared/Factories",
+					"$(SRCROOT)/../Shared/Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -545,8 +551,8 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../Libraries/CoreNetworkCommunicationProject/include/CoreNetworkCommunicationLibrary",
-					"$(SRCROOT)/../Shared//Factories",
-					"$(SRCROOT)/../Shared//Webservices",
+					"$(SRCROOT)/../Shared/Factories",
+					"$(SRCROOT)/../Shared/Webservices",
 				);
 				INFOPLIST_FILE = "Grand Lucayan - Guest App/Grand Lucayan - Guest App-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

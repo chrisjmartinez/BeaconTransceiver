@@ -17,5 +17,11 @@
     [super viewDidLoad];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(advertisement:wasTouched:)]) {
+        [self.delegate performSelector:@selector(advertisement:wasTouched:) withObject:self withObject:[touches anyObject]];
+    }
+}
 
+- (void)advertisement:(PopupAdvertisementViewController *)ad wasTouched:(UITouch *)touch {}
 @end

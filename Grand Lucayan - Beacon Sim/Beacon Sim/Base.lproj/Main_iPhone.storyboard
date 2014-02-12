@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Xk-dH-pvk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Xk-dH-pvk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvW-yf-tj0">
-                                <rect key="frame" x="45" y="321" width="248" height="60"/>
+                                <rect key="frame" x="45" y="226" width="248" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <inset key="titleEdgeInsets" minX="9" minY="-1" maxX="0.0" maxY="0.0"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-41-YOe">
-                                <rect key="frame" x="45" y="389" width="249" height="60"/>
+                                <rect key="frame" x="45" y="294" width="249" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <inset key="titleEdgeInsets" minX="9" minY="-1" maxX="0.0" maxY="0.0"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhu-I4-KVK">
-                                <rect key="frame" x="45" y="457" width="248" height="60"/>
+                                <rect key="frame" x="45" y="362" width="248" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <inset key="titleEdgeInsets" minX="9" minY="-1" maxX="0.0" maxY="0.0"/>
@@ -56,23 +56,49 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simulate a Beacon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzI-Dj-Qnk">
-                                <rect key="frame" x="20" y="272" width="280" height="21"/>
+                                <rect key="frame" x="20" y="177" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGray" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-IY-yRc">
-                                <rect key="frame" x="25" y="111" width="92" height="123"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGreen" translatesAutoresizingMaskIntoConstraints="NO" id="eMB-EF-Pc2">
-                                <rect key="frame" x="115" y="111" width="92" height="123"/>
+                                <rect key="frame" x="57" y="430" width="44" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimotePurple" translatesAutoresizingMaskIntoConstraints="NO" id="DP6-vE-FNg">
-                                <rect key="frame" x="204" y="111" width="92" height="123"/>
+                                <rect key="frame" x="57" y="495" width="44" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="BeaconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9bv-Os-jOy">
+                                <rect key="frame" x="112" y="58" width="96" height="132"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKE-nQ-uxb">
+                                <rect key="frame" x="45" y="427" width="248" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <inset key="titleEdgeInsets" minX="68" minY="-1" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Golf Course">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zVf-cN-y1e" kind="push" id="7rZ-4h-2s6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFR-kW-Kaf">
+                                <rect key="frame" x="45" y="495" width="248" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <inset key="titleEdgeInsets" minX="68" minY="-1" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Casino">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Q2-fg-i9t" kind="push" id="do8-RN-5j4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -98,10 +124,16 @@
                                 <rect key="frame" x="40" y="160" width="240" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimotePurple" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-dG-hdx">
-                                <rect key="frame" x="131" y="74" width="58" height="78"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhs-rq-KU2">
+                                <rect key="frame" x="115" y="62" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BeaconLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapTennisBeacon:" destination="BVw-is-e6y" eventType="touchUpInside" id="k9g-uU-PIU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -110,6 +142,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JS2-Bk-Zlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1334" y="949"/>
+        </scene>
+        <!--Guests View Controller - Guests at Location-->
+        <scene sceneID="cdm-GG-Or2">
+            <objects>
+                <viewController storyboardIdentifier="GuestsAtLocation" title="Guests at Location" id="p7G-Ba-L21" customClass="GuestsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PGd-QE-Tyw"/>
+                        <viewControllerLayoutGuide type="bottom" id="dSZ-hp-jAF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VWo-Dv-C3E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VIM-BL-LZ8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GuestCell" rowHeight="69" id="93e-NA-OMD">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="93e-NA-OMD" id="rD6-et-BGc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf4-iP-NtD">
+                                                    <rect key="frame" x="88" y="11" width="174" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Near the Senses Spa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4G-52-O5R">
+                                                    <rect key="frame" x="88" y="40" width="212" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" fixedFrame="YES" image="BillIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GZ1-Pq-YY9">
+                                                    <rect key="frame" x="10" y="-1" width="70" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ProximityLozengeNear" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-CR-CzW">
+                                                    <rect key="frame" x="260" y="24" width="40" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="p7G-Ba-L21" id="0Js-sq-76i"/>
+                                    <outlet property="delegate" destination="p7G-Ba-L21" id="SiB-DD-7eP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="VIM-BL-LZ8" id="1Hd-Io-pl6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkU-1k-OYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="1283"/>
+        </scene>
+        <!--Casino Beacon View Controller - Casino Beacon-->
+        <scene sceneID="AK5-in-AF8">
+            <objects>
+                <viewController id="3Q2-fg-i9t" customClass="CasinoBeaconViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="03w-eC-F66"/>
+                        <viewControllerLayoutGuide type="bottom" id="eez-ej-OhT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vby-W2-apJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="activities-casino" translatesAutoresizingMaskIntoConstraints="NO" id="Xbe-Wy-I7p">
+                                <rect key="frame" x="40" y="158" width="240" height="376"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4d-33-bdq">
+                                <rect key="frame" x="131" y="72" width="58" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="EstimotePurple">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCasinoBeacon:" destination="3Q2-fg-i9t" eventType="touchUpInside" id="nJF-zK-bmz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Casino Beacon" id="7f5-ae-9ke"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4M-7I-sEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="622"/>
         </scene>
         <!--Dining Beacon View Controller - Dining Beacon-->
         <scene sceneID="MsM-70-1Vx">
@@ -127,10 +259,16 @@
                                 <rect key="frame" x="40" y="159" width="240" height="382"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGreen" translatesAutoresizingMaskIntoConstraints="NO" id="YGd-f4-UxS">
-                                <rect key="frame" x="131" y="73" width="58" height="78"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ8-w9-jDR">
+                                <rect key="frame" x="115" y="61" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BeaconLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapDiningBeacon:" destination="YAq-y9-pb4" eventType="touchUpInside" id="E0E-Wg-rYE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -152,14 +290,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="EstimoteGray" translatesAutoresizingMaskIntoConstraints="NO" id="ju5-61-Adr">
-                                <rect key="frame" x="131" y="73" width="58" height="78"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SensesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KHW-oS-nH3">
                                 <rect key="frame" x="40" y="159" width="240" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV9-M3-1Ue">
+                                <rect key="frame" x="115" y="61" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BeaconLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapSpaBeacon:" destination="E6z-F3-MU6" eventType="touchUpInside" id="OXg-aS-iey"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -168,6 +312,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiQ-md-YhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1334" y="-384"/>
+        </scene>
+        <!--Golf Beacon View Controller - Golf Course Beacon-->
+        <scene sceneID="koF-Zm-M11">
+            <objects>
+                <viewController id="zVf-cN-y1e" customClass="GolfBeaconViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QmW-eo-owE"/>
+                        <viewControllerLayoutGuide type="bottom" id="J2m-6Y-Fwg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7YD-0c-9x9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="golf-rates-header" translatesAutoresizingMaskIntoConstraints="NO" id="PlM-5t-lzw">
+                                <rect key="frame" x="40" y="153" width="240" height="376"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwl-dj-v0n">
+                                <rect key="frame" x="131" y="67" width="58" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="EstimoteGreen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapGolfBeacon:" destination="zVf-cN-y1e" eventType="touchUpInside" id="pxl-QS-2IT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Golf Course Beacon" id="XBq-WQ-fvK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpQ-L6-ZzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="-268"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GBS-FN-YCe">
@@ -190,12 +369,16 @@
     </scenes>
     <resources>
         <image name="BeaconIcon" width="60" height="60"/>
+        <image name="BeaconLogo" width="250" height="250"/>
+        <image name="BillIcon" width="70" height="70"/>
         <image name="ChurchillsLogo" width="149" height="225"/>
-        <image name="EstimoteGray" width="140" height="190"/>
         <image name="EstimoteGreen" width="140" height="190"/>
         <image name="EstimotePurple" width="140" height="190"/>
+        <image name="ProximityLozengeNear" width="40" height="20"/>
         <image name="SensesLogo" width="263" height="413"/>
         <image name="TennisLogo" width="637" height="825"/>
+        <image name="activities-casino" width="240" height="376"/>
+        <image name="golf-rates-header" width="240" height="403"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

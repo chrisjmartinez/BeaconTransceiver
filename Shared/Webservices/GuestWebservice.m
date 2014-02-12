@@ -108,4 +108,19 @@
     [self PUT:nil];
 }
 
+- (void)putGuest:(NSString *)guestID location:(NSString *)locationID uuid:(NSUUID *)uuid major:(CLBeaconMajorValue)major minor:(CLBeaconMinorValue)minor proximity:(CLProximity)proximity {
+    NSLog(@"%@", [NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]);
+    
+    // /guest/:guest_id/location/:location_id/proximity/:proximity
+    // Ex. /guest/abc/location/def/proximity/100
+    //This service will update an existing guest location if it exists, or add it if it doesn't.  This way you can just constantly send locations without worrying about if it is a new location or not.
+    // set the webservice URL
+    NSString *urlString = [NSString stringWithFormat:@"%@:%ld/guest/%@/location/%@/proximity/%d", self.baseURL, (long)self.port, guestID, [uuid UUIDString], proximity];
+    self.networkCommunication.settings.url = [NSURL URLWithString:urlString];
+    
+    self.type = GuestWebserviceTypePut;
+    
+    [self PUT:nil];
+}
+
 @end

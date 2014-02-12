@@ -12,6 +12,7 @@
 #import "GuestWebservice.h"
 #import "LocationWebservice.h"
 #import "CoreNetworkCommunicationResponse.h"
+#import "BeaconDefinitions.h"
 
 @interface WebserviceTests : XCAsynchronousTestCase <BaseWebserviceDelegate>
 @end
@@ -87,6 +88,18 @@
     [self waitForBlockToComplete];
 }
 
+- (void)testGetGuestsForLocation
+{
+    LocationWebservice * webservice = [LocationWebservice new];
+    webservice.delegate = self;
+    
+    [self startBlockWait];
+    
+    [webservice getGuestsForLocation:diningProximityID];
+    
+    [self waitForBlockToComplete];
+}
+
 - (void)testPostGuest
 {
     GuestWebservice * webservice = [GuestWebservice new];
@@ -106,7 +119,7 @@
     [self waitForBlockToComplete];
 }
 
-- (void)testPutGuest
+- (void)testPutGuests
 {
     GuestWebservice * webservice = [GuestWebservice new];
     webservice.delegate = self;
@@ -114,6 +127,18 @@
     [self startBlockWait];
     
     [webservice putGuests:@"100" location:@"200" proximity:@"300"];
+    
+    [self waitForBlockToComplete];
+}
+
+- (void)testPutGuest
+{
+    GuestWebservice * webservice = [GuestWebservice new];
+    webservice.delegate = self;
+    
+    [self startBlockWait];
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"1234"];
+    [webservice putGuest:@"100" location:@"farm" uuid:uuid major:1 minor:0 proximity:0];
     
     [self waitForBlockToComplete];
 }

@@ -32,7 +32,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.isShowing = YES;
-    [self.guestWS getGuests];
+    [self.guestWS getGuestsForAllLocations];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -46,14 +46,14 @@
     if (self.isShowing) {
         if (service.dictionary) {
             self.guests = [Guest guestsFromJSON:service.dictionary];
-            [self filterGuests];
+            //[self filterGuests];
             // Update the display with new data
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.table reloadData];
             });
             // Fire another request after a one second pause
             [NSThread sleepForTimeInterval:2];
-            [self.guestWS getGuests];
+            [self.guestWS getGuestsForAllLocations];
         }
     }
 }
@@ -63,7 +63,7 @@
     for (Guest *guest in self.guests) {
         if ([collection objectForKey:guest.ID]) {
             Guest *existing = [collection objectForKey:guest.ID];
-            if (guest.proximity > existing.proximity) {
+            if (guest.proximity < existing.proximity && guest.proximity != CLProximityUnknown) {
                 [collection setObject:guest forKey:guest.ID];
             }
         } else {
@@ -74,9 +74,7 @@
     }
     NSMutableArray *filtered = [NSMutableArray array];
     for (Guest * guest in [collection allValues]) {
-        if (guest.proximity != CLProximityUnknown) {
-            [filtered addObject:guest];
-        }
+        [filtered addObject:guest];
     }
     self.guests = filtered;
 }
@@ -100,7 +98,13 @@
     UILabel *name = (UILabel *)[cell viewWithTag:2];
     name.text = guest.ID;
     UILabel *location = (UILabel *)[cell viewWithTag:3];
-    location.text = [NSString stringWithFormat:@"Nearest place: %@", [self displayNameForLocationID:guest.locationID]];
+    if (guest.proximity == CLProximityUnknown) {
+        location.text = @"Location Unknown";
+        location.textColor = [UIColor redColor];
+    } else {
+        location.text = [NSString stringWithFormat:@"Nearest place: %@", [self displayNameForLocationID:guest.locationID]];
+        location.textColor = [UIColor colorWithRed:0 green:0.6 blue:0 alpha:1];
+    }
 	return cell;
 }
 
@@ -109,11 +113,15 @@
 
 - (NSString *)displayNameForLocationID:(NSString *)locationID {
     if ([locationID isEqualToString:spaProximityID]) {
-        return @"Sense Spa";
+        return @"Senses Spa";
     } else if ([locationID isEqualToString:tennisProximityID]) {
         return @"Tennis Pro Shop";
     } else if ([locationID isEqualToString:diningProximityID]) {
         return @"Churchill's";
+    } else if ([locationID isEqualToString:casinoProximityID]) {
+        return @"Casino";
+    } else if ([locationID isEqualToString:golfProximityID]) {
+        return @"Golf Course";
     }
     return locationID;
 }
