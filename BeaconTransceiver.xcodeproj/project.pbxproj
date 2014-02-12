@@ -78,6 +78,7 @@
 		A618791A18AC036F008AB879 /* LocationManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerTests.m; sourceTree = "<group>"; };
 		A618791B18AC036F008AB879 /* XCAsynchronousTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCAsynchronousTestCase.m; sourceTree = "<group>"; };
 		A618792018AC0560008AB879 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = BeaconTransceiverTests/LocationManager.h; sourceTree = SOURCE_ROOT; };
+		A6719BC118AC2ED1000B4589 /* XCAsynchronousTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAsynchronousTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +176,7 @@
 		A6133408183E430200A1F571 /* BeaconTransceiverTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6719BC118AC2ED1000B4589 /* XCAsynchronousTestCase.h */,
 				A618791918AC036F008AB879 /* LocationManager.m */,
 				A618791A18AC036F008AB879 /* LocationManagerTests.m */,
 				A618791B18AC036F008AB879 /* XCAsynchronousTestCase.m */,
